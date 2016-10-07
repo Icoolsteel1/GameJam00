@@ -6,17 +6,27 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\mklsdafglkjasdfa</sprite>
+    <sprites name="Utiliy">
+      <sprite>sprites\sSolid</sprite>
+    </sprites>
+    <sprites name="Joueur">
+      <sprite>sprites\sPlayer</sprite>
+      <sprite>sprites\sTete</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <scripts name="scripts">
-    <script>scripts\scr_script.gml</script>
-  </scripts>
+  <scripts name="scripts"/>
   <objects name="objects">
-    <object>objects\o_objet</object>
-    <object>objects\o_object2</object>
+    <object>objects\oInit</object>
+    <object>objects\oPlayer</object>
+    <objects name="Utility ">
+      <object>objects\oSolid</object>
+    </objects>
   </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_gameplay</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
