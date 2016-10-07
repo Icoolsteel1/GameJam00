@@ -30,6 +30,8 @@
 spd = 3
 hp = 1000 // vie 
 maxHp = 1000 // vie maximal
+argent = 5000
+maxArgent = 10000
 
 tete_index = 0
 head_angle = 0
@@ -92,11 +94,20 @@ if (mouse_x &lt; x) {
 keyLeft = keyboard_check(ord("A")) or keyboard_check(ord("Q"))
 keyRight = keyboard_check(ord("D"))
 kyeJump = keyboard_check_pressed(vk_space)
+keyFire = mouse_check_button_pressed(mb_left)
 
 if (keyLeft) { hspd = -spd }
 if (keyRight) { hspd = spd }
 
 if (!keyLeft &amp;&amp; !keyRight) || (keyLeft &amp;&amp; keyRight) { hspd = 0 }
+
+if (keyFire) {
+    if (argent &gt; 0) {
+        bullet = instance_create(x,y-head_offset,oBullet)
+        bullet.image_angle = head_angle
+        argent -= 10
+    }
+}
 
 if (place_meeting(x+hspd,y,oSolid)){
     while (!place_meeting(x+sign(hspd),y,oSolid)){
@@ -129,6 +140,8 @@ x += hspd
           <argument>
             <kind>1</kind>
             <string>/// Affiche les têtes du joueur
+
+draw_text(0,0,argent)
 
 draw_self()
 draw_sprite_ext(sTete,tete_index,x,y-head_offset,1,1,head_angle,c_white,1)

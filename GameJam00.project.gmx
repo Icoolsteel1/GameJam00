@@ -8,11 +8,13 @@
   <sprites name="sprites">
     <sprites name="Utiliy">
       <sprite>sprites\sSolid</sprite>
+      <sprite>sprites\sTempBullet</sprite>
     </sprites>
     <sprites name="Joueur">
       <sprite>sprites\sPlayer</sprite>
       <sprite>sprites\sTete</sprite>
     </sprites>
+    <sprite>sprites\sBuilding01_temp</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -22,7 +24,11 @@
     <object>objects\oPlayer</object>
     <objects name="Utility ">
       <object>objects\oSolid</object>
+      <object>objects\oBuilding_y0</object>
+      <object>objects\oBuilding_y1</object>
+      <object>objects\oBuilding_y2</object>
     </objects>
+    <object>objects\oBullet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_gameplay</room>
