@@ -18,20 +18,34 @@
       <sprite>sprites\sPlayer_Walk</sprite>
     </sprites>
     <sprite>sprites\sBuilding01_temp</sprite>
+    <sprites name="enemy">
+      <sprite>sprites\sEnemyTerre</sprite>
+      <sprite>sprites\sBullet</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts"/>
   <objects name="objects">
+    <object>objects\oHUD</object>
     <object>objects\oInit</object>
-    <object>objects\oPlayer</object>
     <objects name="Utility ">
       <object>objects\oSolid</object>
       <object>objects\oBuilding_y0</object>
       <object>objects\oBuilding_y1</object>
       <object>objects\oBuilding_y2</object>
     </objects>
-    <object>objects\oBullet</object>
+    <objects name="Joueur">
+      <object>objects\oPlayer</object>
+      <object>objects\oBullet</object>
+    </objects>
+    <objects name="Enemy">
+      <object>objects\oEnemySWAT</object>
+      <object>objects\oEnemyBullet</object>
+    </objects>
+    <objects name="Item">
+      <object>objects\oArgentItem</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_gameplay</room>
