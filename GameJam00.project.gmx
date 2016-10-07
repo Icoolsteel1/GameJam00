@@ -12,11 +12,13 @@
     <sprites name="Joueur">
       <sprite>sprites\sPlayer</sprite>
       <sprite>sprites\sTete</sprite>
+      <sprite>sprites\sPlayer_Idle</sprite>
+      <sprite>sprites\sPlayer_Jump</sprite>
+      <sprite>sprites\sPlayer_Walk</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\oInit</object>
     <object>objects\oPlayer</object>
