@@ -25,6 +25,7 @@
     <sprite>sprites\sBuilding01</sprite>
     <sprite>sprites\sbuilding02</sprite>
     <sprite>sprites\sBuilding03</sprite>
+    <sprite>sprites\sFloor</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
