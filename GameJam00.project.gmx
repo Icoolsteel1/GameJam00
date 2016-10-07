@@ -17,11 +17,14 @@
       <sprite>sprites\sPlayer_Jump</sprite>
       <sprite>sprites\sPlayer_Walk</sprite>
     </sprites>
-    <sprite>sprites\sBuilding01_temp</sprite>
     <sprites name="enemy">
       <sprite>sprites\sEnemyTerre</sprite>
       <sprite>sprites\sBullet</sprite>
     </sprites>
+    <sprite>sprites\sBuilding01_temp</sprite>
+    <sprite>sprites\sBuilding01</sprite>
+    <sprite>sprites\sbuilding02</sprite>
+    <sprite>sprites\sBuilding03</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
