@@ -6,7 +6,7 @@
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>sPlayer_Idle</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -30,6 +30,9 @@
 image_speed = 0.1
 
 spd = 3
+hspd = 0
+vspd = 0
+jspd = 8
 hp = 1000 // vie 
 maxHp = 1000 // vie maximal
 argent = 5000
@@ -95,14 +98,29 @@ if (mouse_x &lt; x) {
 
 keyLeft = keyboard_check(ord("A")) or keyboard_check(ord("Q"))
 keyRight = keyboard_check(ord("D"))
-kyeJump = keyboard_check_pressed(vk_space)
+keyJump = keyboard_check_pressed(vk_space)
 keyFire = mouse_check_button_pressed(mb_left)
 
+/* Graviter et saut */
+if (y &lt; 608-70) {
+    if ( vspd &lt; 8 ) {
+        vspd += 1
+    }
+} else {
+    vspd = 0
+    
+    if (keyJump){
+        vspd = -jspd
+    }
+}
+
+/* Touche directionnel */
 if (keyLeft) { hspd = -spd sprite_index = sPlayer_Walk image_speed = 0.2}
 if (keyRight) { hspd = spd sprite_index = sPlayer_Walk image_speed = 0.2}
 
 if (!keyLeft &amp;&amp; !keyRight) || (keyLeft &amp;&amp; keyRight) { hspd = 0 sprite_index = sPlayer_Idle image_speed = 0.1}
 
+/* Tirer les projectils */
 if (keyFire) {
     if (argent &gt; 0) {
         bullet = instance_create(x,y-head_offset,oBullet)
@@ -111,14 +129,24 @@ if (keyFire) {
     }
 }
 
+/* Collision */
 if (place_meeting(x+hspd,y,oSolid)){
     while (!place_meeting(x+sign(hspd),y,oSolid)){
         x += hspd
     }
     hspd = 0
 }
-
+/*
+if (place_meeting(x,y+vspd,oSolid)){
+    while (!place_meeting(x,y+sign(vspd),oSolid)){
+        y += vspd
+    }
+    vspd = 0
+    y = round(y)
+}
+*/
 x += hspd
+y += vspd
 </string>
           </argument>
         </arguments>
