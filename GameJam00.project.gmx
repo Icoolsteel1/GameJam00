@@ -21,6 +21,7 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\oInit</object>
     <object>objects\oPlayer</object>
