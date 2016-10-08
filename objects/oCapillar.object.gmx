@@ -49,8 +49,10 @@
           <argument>
             <kind>1</kind>
             <string>x=oPlayer.x
-y=oPlayer.y-90
+y=oPlayer.y-45
 image_angle=point_direction(x,y, mouse_x,mouse_y)
+
+if(mouse_x&lt;oPlayer.x){image_xscale=-1}
 
 if (oPlayer.CapillarActive==1) &amp;&amp; (oPlayer.CapillarCount &gt;0)
 {
