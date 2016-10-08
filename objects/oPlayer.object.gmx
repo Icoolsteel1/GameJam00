@@ -41,6 +41,8 @@ maxArgent = 10000
 tete_index = 0
 head_angle = 0
 head_offset = 90
+
+outMap = false
 </string>
           </argument>
         </arguments>
@@ -103,11 +105,15 @@ keyFire = mouse_check_button_pressed(mb_left)
 
 /* Graviter et saut */
 if (y &lt; 608-70) {
-    if ( vspd &lt; 8 ) {
+    sprite_index = sPlayer_Jump
+
+    if ( vspd &lt; 16 ) {
         vspd += 1
     }
 } else {
     vspd = 0
+    
+    outMap = false
     
     if (keyJump){
         vspd = -jspd
@@ -115,10 +121,11 @@ if (y &lt; 608-70) {
 }
 
 /* Touche directionnel */
-if (keyLeft) { hspd = -spd sprite_index = sPlayer_Walk image_speed = 0.2}
-if (keyRight) { hspd = spd sprite_index = sPlayer_Walk image_speed = 0.2}
-
-if (!keyLeft &amp;&amp; !keyRight) || (keyLeft &amp;&amp; keyRight) { hspd = 0 sprite_index = sPlayer_Idle image_speed = 0.1}
+if (vspd == 0 &amp;&amp; !outMap){
+    if (keyLeft) { hspd = -spd sprite_index = sPlayer_Walk image_speed = 0.2}
+    if (keyRight) { hspd = spd sprite_index = sPlayer_Walk image_speed = 0.2}
+    if (!keyLeft &amp;&amp; !keyRight) || (keyLeft &amp;&amp; keyRight) { hspd = 0 sprite_index = sPlayer_Idle image_speed = 0.1}
+}
 
 /* Tirer les projectils */
 if (keyFire) {
@@ -136,6 +143,13 @@ if (place_meeting(x+hspd,y,oSolid)){
     }
     hspd = 0
 }
+
+if (x &lt; view_xview) {
+    vspd = -20
+    hspd = 5
+    outMap = true
+}
+
 /*
 if (place_meeting(x,y+vspd,oSolid)){
     while (!place_meeting(x,y+sign(vspd),oSolid)){

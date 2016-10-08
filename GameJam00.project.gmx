@@ -29,10 +29,10 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <scripts name="scripts"/>
   <objects name="objects">
-    <object>objects\oHUD</object>
     <object>objects\oInit</object>
+    <object>objects\oHUD</object>
+    <object>objects\oCamera</object>
     <objects name="Utility ">
       <object>objects\oSolid</object>
       <object>objects\oBuilding_y0</object>
@@ -50,6 +50,7 @@
     <objects name="Item">
       <object>objects\oArgentItem</object>
     </objects>
+    <object>objects\oRoad</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_gameplay</room>
