@@ -74,30 +74,6 @@ vie = choose(10,15,20)
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Variable de l'animation destruction
-
-exploded = false
-yExplod = 0
-</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -126,76 +102,16 @@ if (proj != noone){
 }
 
 if (vie &lt; 0) {
-    if (buildingType == 1 &amp;&amp; !exploded){
+    if (buildingType == 1){
         for (i=0;i&lt;50;i++){
             instance_create(x+irandom_range(0,sprite_get_width(sprite_index)), y+irandom_range(0,sprite_get_height(sprite_index)-120), oArgentItem)
         }
     }
-    exploded = true
-    if (yExplod &gt; sprite_get_height(sprite_index)){
-        instance_destroy()
-    }
+    inst = instance_create(x,y,oBuilding_Destroy)
+    inst.sprite_index = sprite_index
+    playerScore += 10
+    instance_destroy()
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Animation destruction
-
-if (exploded){
-    yExplod += 4
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Animation de destruction
-
-
-if (exploded){
-    draw_sprite_part(sprite_index,0,0,0-yExplod,sprite_get_width(sprite_index),sprite_get_height(sprite_index),x+random_range(-10,10),y)
-    for(i=0;i&lt;15;i++){
-        draw_set_color(c_white)
-        draw_circle(x+random_range(0,sprite_get_width(sprite_index)),y+sprite_get_height(sprite_index),random_range(32,64),false)
-    }
-}else{
-    draw_self()
-}
-
 </string>
           </argument>
         </arguments>

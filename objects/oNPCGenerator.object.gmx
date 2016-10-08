@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>1000</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,17 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Variable global
+            <string>/// Set les variable de spawn des enemy
 
-globalvar playerScore;
+Entity = 0
+maxEntity = 1200
 
-playerScore = 0
+enemy[0] = oEnemySwat
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="4">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -52,15 +53,21 @@ playerScore = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Ajuster la vitesse de la salle 
+            <string>/// Create unity
 
-if (room_speed != 60) {room_speed = 60}
+if (Entity &lt; maxEntity){
+    var getSide = irandom(1)
+    switch(getSide){
+        case 0: instance_create(view_xview-12,604,oEnemySwat) break;
+        case 1: instance_create(view_xview+view_wview+12,604,oEnemySwat) break;
+    }
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="2">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -77,32 +84,13 @@ if (room_speed != 60) {room_speed = 60}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Initialisation au début du jeu
+            <string>if (playerScore &gt; 25) {
+    if (alarm[0] == -1) { alarm[0] = room_speed*2 }
+}
 
-show_debug_message("[INIT] Jeu lancer")
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_background(background2,x,y)
+if (playerScore &gt; 300) {
+    if (alarm[0] == -1) { alarm[1] = room_speed*5 }
+}
 </string>
           </argument>
         </arguments>

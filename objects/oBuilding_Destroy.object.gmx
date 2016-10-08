@@ -3,9 +3,9 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>1000</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,17 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Variable global
+            <string>/// Variable de l'animation destruction
 
-globalvar playerScore;
-
-playerScore = 0
+yExplod = 0
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="4">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -52,15 +50,15 @@ playerScore = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Ajuster la vitesse de la salle 
+            <string>/// Interaction avec les projectils
 
-if (room_speed != 60) {room_speed = 60}
+if (yExplod &gt; sprite_get_height(sprite_index)){
+    instance_destroy()
+}
 </string>
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="7" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -77,9 +75,10 @@ if (room_speed != 60) {room_speed = 60}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Initialisation au début du jeu
+            <string>/// Animation destruction
 
-show_debug_message("[INIT] Jeu lancer")
+yExplod += 4
+
 </string>
           </argument>
         </arguments>
@@ -102,7 +101,13 @@ show_debug_message("[INIT] Jeu lancer")
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_background(background2,x,y)
+            <string>/// Animation de destruction
+
+draw_sprite_part(sprite_index,0,0,0-yExplod,sprite_get_width(sprite_index),sprite_get_height(sprite_index),x+random_range(-10,10),y)
+for(i=0;i&lt;15;i++){
+    draw_set_color(c_white)
+    draw_circle(x+random_range(0,sprite_get_width(sprite_index)),y+sprite_get_height(sprite_index)-32,random_range(32,64),false)
+}
 </string>
           </argument>
         </arguments>
