@@ -30,6 +30,8 @@
     <sound>sound\sound22_Trump_pingping</sound>
     <sound>sound\sound23_Trump_woua</sound>
     <sound>sound\sound24_Trump_wouinwouin</sound>
+    <sound>sound\sound25_Trump_kechinkechin2</sound>
+    <sound>sound\sound26_Trump_banbangbingbing2</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="HUD">
