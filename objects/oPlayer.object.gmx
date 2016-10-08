@@ -38,6 +38,13 @@ maxHp = 1000 // vie maximal
 argent = 1200
 maxArgent = 75000
 
+
+LaserCount = 120 
+LaserCooldown = 0 // Cooldown Laser
+LaserCooldownMax = 240 // Cooldown Laser maximal
+LaserActive = 0
+instance_create(x,y, oLaser)
+
 tete_index = 0
 head_angle = 0
 head_offset = 50
@@ -102,6 +109,14 @@ keyLeft = keyboard_check(ord("A")) or keyboard_check(ord("Q"))
 keyRight = keyboard_check(ord("D"))
 keyJump = keyboard_check_pressed(vk_space)
 keyFire = mouse_check_button_pressed(mb_left)
+keyLaser = mouse_check_button_pressed(mb_right)
+
+/* Skin de tête */
+head_skin = sDtTete
+if (LaserActive==1){head_skin = sDtTeteLaser}
+
+/* Cooldown Laser */
+if (LaserCooldown&gt;0){LaserCooldown--}
 
 /* Graviter et saut */
 if (y &lt; 608-70) {
@@ -135,6 +150,17 @@ if (keyFire) {
         argent -= 2+round(playerScore/100)
     }
 }
+
+/* Tir Laser */
+if (keyLaser) &amp;&amp; (LaserCooldown&lt;1)
+    {
+    LaserActive=1
+    head_skin=sDtTeteLaser
+    }
+
+if (LaserActive == 1)
+    {instance_activate_object(oLaser)}
+    else{instance_deactivate_object(oLaser)}
 
 /* Collision */
 if (place_meeting(x+hspd,y,oSolid)){
@@ -187,12 +213,24 @@ if (argent &gt; maxArgent) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Affiche les têtes du joueur
+            <string>/// Affiche les têtes du joueur et Laser
 
+// Laser
+if (LaserActive==1) &amp;&amp; (LaserCount &gt; 0){
+
+draw_set_color(c_white)
+draw_line_width(x+(image_xscale*5),y-30-head_offset,mouse_x,mouse_y,random_range(6,9))
+draw_set_color(c_red)
+draw_line_width(x+(image_xscale*5),y-30-head_offset,mouse_x,mouse_y,random_range(2,4))
+draw_set_color(c_white)
+
+LaserCount--
+if(LaserCount==0){LaserCooldown=240}
+} else {LaserCount=120; LaserActive=0}
+
+// Tête
 draw_self()
-draw_sprite_ext(sDtTeteCrache,tete_index,x+(image_xscale*5),y-head_offset,1,image_xscale,head_angle,c_white,1)
-
-
+draw_sprite_ext(head_skin,tete_index,x+(image_xscale*5),y-head_offset,1,image_xscale,head_angle,c_white,1)
 </string>
           </argument>
         </arguments>

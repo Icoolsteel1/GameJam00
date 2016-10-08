@@ -31,6 +31,7 @@ image_speed = 0
 stopDistance = irandom_range(60,120)
 spd = 1.2
 canFire = false
+vie=1
 </string>
           </argument>
         </arguments>
@@ -103,9 +104,9 @@ if (irandom(5) == 0) {instance_create(x,y-10,oArgentItem)}
           <argument>
             <kind>1</kind>
             <string>/// Mort du personnage
-
-if (place_meeting(x,y,oBullet)){ playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy()}
 if (place_meeting(x,y,oPlayer)){ playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy()}
+if (place_meeting(x,y,oBullet)){ playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy()}
+if (place_meeting(x,y,oLaser)) { playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy()}
 </string>
           </argument>
         </arguments>

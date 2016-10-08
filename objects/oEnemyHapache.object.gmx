@@ -99,6 +99,7 @@ sideGo = -1
           <argument>
             <kind>1</kind>
             <string>if (place_meeting(x,y,oBullet)){ playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy()}
+if (place_meeting(x,y,oLaser)) { playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy()}
 
 if (sideGo != -1){
     if (sideGo == 0) {

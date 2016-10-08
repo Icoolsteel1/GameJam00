@@ -96,12 +96,15 @@ maxCashSpawn = 100
             <kind>1</kind>
             <string>/// Interaction avec les projectils
 
+/* Collision Bullet */
 proj = instance_place(x,y,oBullet)
-
 if (proj != noone){
     vie -= 2
     with(proj) { instance_destroy() }
 }
+
+/* Collision Laser */
+if (instance_place(x,y,oLaser)){vie -=1}
 
 if (vie &lt; 0) {
     if (buildingType == 1){

@@ -2,13 +2,13 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
-  <depth>-100</depth>
+  <visible>0</visible>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="8" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,30 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Affiche tout les information 
-
-draw_set_color(c_black)
-draw_set_font(font0)
-
-/*
-if (instance_exists(oPlayer)){
-    
-    draw_text(view_xview,view_yview+32,"VIE : " + string(oPlayer.hp))
-    draw_text(view_xview,view_yview+64,"SCORE : " + string(playerScore))
-}
-*/
-
-draw_sprite(sHUD_Trump,0,view_xview+10,view_yview+10)
-draw_text(view_xview+150,view_yview+85,string(round(oPlayer.argent)))
-draw_text(view_xview+260,view_yview+85,string(playerScore))
-
-draw_sprite_ext(sLifebar,0,view_xview+88,view_yview+23,oPlayer.hp/oPlayer.maxHp,1,0,c_white,1)
-
-draw_sprite(sLaserUp,0,view_xview+420,view_yview+103)
-draw_set_alpha(.5)
-draw_sprite_ext(sLaserDo,0,view_xview+420,view_yview+103,1,oPlayer.LaserCooldown/oPlayer.LaserCooldownMax,0,c_white,1)
-draw_set_alpha(1)
-
+            <string>if (place_meeting(x,y,oBullet)){vie-=3}
+if (place_meeting(x,y,oLaser)) {vie-=1}
 </string>
           </argument>
         </arguments>

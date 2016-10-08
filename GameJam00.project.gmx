@@ -12,6 +12,8 @@
       <sprite>sprites\sHUD_Trump</sprite>
       <sprite>sprites\sLifebar</sprite>
       <sprite>sprites\sEnergiebar</sprite>
+      <sprite>sprites\sLaserUp</sprite>
+      <sprite>sprites\sLaserDo</sprite>
     </sprites>
     <sprites name="Utiliy">
       <sprite>sprites\sSolid</sprite>
@@ -44,6 +46,7 @@
       <sprite>sprites\sCivilSang</sprite>
       <sprite>sprites\sDollars</sprite>
       <sprite>sprites\sExplosionHelico</sprite>
+      <sprite>sprites\sLaserBeam</sprite>
     </sprites>
     <sprites name="Building">
       <sprite>sprites\sBuilding01_temp</sprite>
@@ -88,6 +91,7 @@
     <objects name="Joueur">
       <object>objects\oPlayer</object>
       <object>objects\oBullet</object>
+      <object>objects\oLaser</object>
     </objects>
     <objects name="Enemy">
       <object>objects\oEnemySwat</object>
