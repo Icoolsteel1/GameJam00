@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>canon = instance_create(x,y,oTankCanon)
-
+canon.owner = id
 /// Creation de l'instance
 
 image_speed = 0.2
@@ -154,9 +154,6 @@ if (oPlayer.x &gt; x){
 } else {
     image_xscale = -1  
 }
-
-canon.x = x
-canon.y = y
 </string>
           </argument>
         </arguments>
