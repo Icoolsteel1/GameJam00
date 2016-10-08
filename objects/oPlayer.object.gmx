@@ -54,6 +54,11 @@ CapillarCooldownMax = 240 // Cooldown Cheveux Max
 CapillarActive = 0
 instance_create(x,y, oCapillar)
 
+FlameCount = 90 
+FlameCooldown = 0 // Cooldown Laser
+FlameCooldownMax = 240 // Cooldown Laser maximal
+FlameActive = 0
+instance_create(x,y, oLaser)
 
 tete_index = 0
 head_angle = 0
@@ -122,6 +127,7 @@ keyJump = keyboard_check_pressed(vk_space)
 keyFire = mouse_check_button_pressed(mb_left)
 keyLaser = mouse_check_button_pressed(mb_right)
 keyCapillar = keyboard_check_pressed(ord("E"))
+keyFlame = keyboard_check_pressed(ord("F"))
 
 /* Skin de tête */
 head_skin = sDtTete
@@ -132,6 +138,8 @@ if (BulletCooldown&gt;0){BulletCooldown-- head_skin = sDtTeteCrache}
 if (LaserCooldown&gt;0){LaserCooldown--}
 /* Cooldown Cheveux */
 if (CapillarCooldown&gt;0){CapillarCooldown--}
+/* Cooldown Cheveux */
+if (FlameCooldown&gt;0){FlameCooldown--}
 
 if (!playerDead){
     /* Graviter et saut */
@@ -205,7 +213,24 @@ if (!playerDead){
     if (CapillarActive == 1)
         {instance_activate_object(oCapillar)}
         else{instance_deactivate_object(oCapillar)}
+    
+    /* Tir Bullet Thrower */
+    if ((keyFlame) || (FlameActive = 1)) &amp;&amp; (FlameCount&gt;0) &amp;&amp; (FlameCooldown&lt;1) {
+        if (argent &gt; 0) {
+            if (!audio_is_playing(sound16_Trump_eeuueueueu)){
+                audio_play_sound(sound16_Trump_eeuueueueu,0,0)}
+            head_skin = sDtTeteCrache
+            FlameActive=1
+            FlameCount--
+            if(FlameCount==0){FlameCooldown=120; FlameCount=90; FlameActive = 0}
+            bullet = instance_create(x,y-head_offset+(random_range(-25,25)),oBullet)
+            bullet.image_angle = head_angle+random_range(-100,100)
+            argent -= 1+round(playerScore/100)
+            
+        }
+    }
         
+            
     /* Collision */
     if (place_meeting(x+hspd,y,oSolid)){
         while (!place_meeting(x+sign(hspd),y,oSolid)){
