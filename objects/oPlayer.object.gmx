@@ -153,7 +153,7 @@ if (y &lt; 608-70) {
     }
     
     if (keyJump){
-        audio_play_sound(snd_jump,0,0)
+        audio_play_sound(sound23_Trump_woua,0,0)
         vspd = -jspd
         jumped = true
     }
@@ -191,7 +191,8 @@ if (LaserActive == 1){
 
 /* Tir Capillaire */
 if (keyCapillar) &amp;&amp; (CapillarCooldown&lt;1) 
-    {CapillarActive=1}
+    {CapillarActive=1
+    audio_play_sound(sound19_Trump_lalala,0,0)}
 if (CapillarActive == 1)
     {instance_activate_object(oCapillar)}
     else{instance_deactivate_object(oCapillar)}
