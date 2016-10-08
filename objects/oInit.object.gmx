@@ -29,7 +29,7 @@
 
 globalvar playerScore;
 
-playerScore = 100000
+playerScore = 0
 </string>
           </argument>
         </arguments>

@@ -70,6 +70,8 @@ if (buildingType == 1){
 } 
 
 vie = choose(10,15,20)
+
+maxCashSpawn = 100
 </string>
           </argument>
         </arguments>
@@ -103,9 +105,16 @@ if (proj != noone){
 
 if (vie &lt; 0) {
     if (buildingType == 1){
-        for (i=0;i&lt;10+round(playerScore/10);i++){
-            instance_create(x+irandom_range(0,sprite_get_width(sprite_index)), y+irandom_range(0,sprite_get_height(sprite_index)-120), oArgentItem)
+        if (playerScore/10 &gt;= maxCashSpawn){
+           for (i=0;i&lt;100;i++){
+                instance_create(x+irandom_range(0,sprite_get_width(sprite_index)), y+irandom_range(0,sprite_get_height(sprite_index)-120), oArgentItem)
+            } 
+        } else {
+            for (i=0;i&lt;10+round(playerScore/10);i++){
+                instance_create(x+irandom_range(0,sprite_get_width(sprite_index)), y+irandom_range(0,sprite_get_height(sprite_index)-120), oArgentItem)
+            }
         }
+        
     }
     inst = instance_create(x,y,oBuilding_Destroy)
     inst.sprite_index = sprite_index
