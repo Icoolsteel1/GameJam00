@@ -54,6 +54,7 @@ image_yscale = 3;
           <argument>
             <kind>1</kind>
             <string>/// IMAGE_SPEED 
+
 image_speed = 0;
 image_index = 5;
 </string>

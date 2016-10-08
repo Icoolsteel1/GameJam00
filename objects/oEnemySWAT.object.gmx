@@ -81,7 +81,8 @@ if (irandom(5) == 0) {instance_create(x,y-10,oArgentItem)}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 1;
+            <string>
+image_index = 1;
 instance_create(x,y,oEnemyBullet)
 </string>
           </argument>
