@@ -42,6 +42,7 @@
       <object>objects\oBuilding_y0</object>
       <object>objects\oBuilding_y1</object>
       <object>objects\oBuilding_y2</object>
+      <object>objects\oBuilding_Destroy</object>
     </objects>
     <objects name="Joueur">
       <object>objects\oPlayer</object>
