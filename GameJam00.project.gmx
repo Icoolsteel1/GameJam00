@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sndMusic</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="HUD">
       <sprite>sprites\sHUD_Trump</sprite>
@@ -35,10 +37,13 @@
       <sprite>sprites\sSoldat</sprite>
       <sprite>sprites\sSwatCamion</sprite>
       <sprite>sprites\sSwatCamionPorte</sprite>
+      <sprite>sprites\sHelicoDetruit</sprite>
+      <sprite>sprites\sHelicoMissile</sprite>
     </sprites>
     <sprites name="Particles">
       <sprite>sprites\sCivilSang</sprite>
       <sprite>sprites\sDollars</sprite>
+      <sprite>sprites\sExplosionHelico</sprite>
     </sprites>
     <sprites name="Building">
       <sprite>sprites\sBuilding01_temp</sprite>
@@ -50,6 +55,7 @@
       <sprite>sprites\sBuilding05</sprite>
       <sprite>sprites\sBuilding06</sprite>
       <sprite>sprites\sBuilding07</sprite>
+      <sprite>sprites\sVoiture</sprite>
     </sprites>
     <sprite>sprites\sFloor</sprite>
     <sprite>sprites\sSky</sprite>

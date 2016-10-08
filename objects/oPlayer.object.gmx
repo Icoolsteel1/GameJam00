@@ -191,6 +191,8 @@ if (argent &gt; maxArgent) {
 
 draw_self()
 draw_sprite_ext(sDtTeteCrache,tete_index,x+(image_xscale*5),y-head_offset,1,image_xscale,head_angle,c_white,1)
+
+
 </string>
           </argument>
         </arguments>
