@@ -84,7 +84,10 @@ explosion = 0;
             <kind>1</kind>
             <string>/// Missiles
 
-instance_create(x+20,y+3,oHelicoMissile);
+if (!detruit){
+    audio_play_sound(snd_missile,0,0)
+    instance_create(x+20,y+3,oHelicoMissile);
+}
 </string>
           </argument>
         </arguments>
@@ -108,8 +111,10 @@ instance_create(x+20,y+3,oHelicoMissile);
           <argument>
             <kind>1</kind>
             <string>/// Bullets
-
-instance_create(x,y,oEnemyBullet)
+if (!detruit){
+    audio_play_sound(snd_fusil,0,0)
+    instance_create(x,y,oEnemyBullet)
+}
 </string>
           </argument>
         </arguments>
@@ -133,8 +138,10 @@ instance_create(x,y,oEnemyBullet)
           <argument>
             <kind>1</kind>
             <string>
-if (place_meeting(x,y,oBullet)){ playerScore += 1 oNPCGenerator.Entity -= 1; detruit = 1; }
-if (place_meeting(x,y,oLaser)) { playerScore += 1 oNPCGenerator.Entity -= 1; detruit = 1; }
+if (!detruit){
+    if (place_meeting(x,y,oBullet)){ playerScore += 1 oNPCGenerator.Entity -= 1; detruit = 1; audio_play_sound(snd_miniExplode,0,0) }
+    if (place_meeting(x,y,oLaser)) { playerScore += 1 oNPCGenerator.Entity -= 1; detruit = 1; audio_play_sound(snd_miniExplode,0,0) }
+}
 
 if detruit == 1
 {
@@ -148,25 +155,25 @@ if detruit == 1
     
     if !place_meeting(x,y-60,oRoad) // tombe
     y += 4;
-}
-
-if (sideGo != -1){
-    if (sideGo == 0) {
-        x += spd
-        image_angle = -15
-        if (x = view_wview+32) {
-            oNPCGenerator.Entity -= 1
-            instance_destroy()
+} else {
+    if (sideGo != -1){
+        if (sideGo == 0) {
+            x += spd
+            image_angle = -15
+            if (x = view_wview+32) {
+                oNPCGenerator.Entity -= 1
+                instance_destroy()
+            }
         }
-    }
-    
-    if (sideGo == 1){
-        x -= spd
-        image_angle = 15
-        image_xscale = -1
-        if (x = view_xview-32) {
-            oNPCGenerator.Entity -= 1
-            instance_destroy()
+        
+        if (sideGo == 1){
+            x -= spd
+            image_angle = 15
+            image_xscale = -1
+            if (x = view_xview-32) {
+                oNPCGenerator.Entity -= 1
+                instance_destroy()
+            }
         }
     }
 }
