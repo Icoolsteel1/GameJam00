@@ -50,8 +50,10 @@
             <kind>1</kind>
             <string>/// Ajuste la camera
 
-if (oPlayer.x &gt; view_xview+view_wview/2) {
-    view_xview = oPlayer.x-view_wview/2+2
+if (!roomLock){
+    if (oPlayer.x &gt; view_xview+view_wview/2) {
+        view_xview = oPlayer.x-view_wview/2+2
+    }
 }
 
 view_yview = random_range(-shake,shake)

@@ -29,7 +29,7 @@
 
 image_speed = 0.1
 
-spd = 3
+spd = 2.6
 hspd = 0
 vspd = 0
 jspd = 16
@@ -246,6 +246,14 @@ if (!playerDead){
         vspd = -20
         hspd = 5
         outMap = true
+    }
+    
+    if (roomLock){
+        if (x &gt; view_xview+view_wview) {
+            vspd = -20
+            hspd = -5
+            outMap = true
+        }
     }
     
     /*
