@@ -28,6 +28,8 @@
     </sprites>
     <sprite>sprites\sFloor</sprite>
     <sprite>sprites\sSky</sprite>
+    <sprite>sprites\sSky2</sprite>
+    <sprite>sprites\sSky3</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
