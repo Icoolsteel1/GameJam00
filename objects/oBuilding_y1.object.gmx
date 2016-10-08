@@ -132,8 +132,6 @@ if (vie &lt; 0) {
     playerScore += 10
     instance_destroy()
 }
-
-if (place_meeting(x,y,oSecurity)){ instance_destroy() }
 </string>
           </argument>
         </arguments>

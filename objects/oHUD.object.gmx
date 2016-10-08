@@ -45,10 +45,10 @@ draw_text(view_xview+260,view_yview+85,string(playerScore))
 draw_sprite_ext(sLifebar,0,view_xview+88,view_yview+23,oPlayer.hp/oPlayer.maxHp,1,0,c_white,1)
 
 draw_sprite(sLaserUp,0,view_xview+50,view_yview+210)
-draw_set_alpha(.5)
 draw_sprite_ext(sLaserDo,0,view_xview+50,view_yview+210,1,oPlayer.LaserCooldown/oPlayer.LaserCooldownMax,0,c_white,1)
-draw_set_alpha(1)
 
+draw_sprite(sCapillarUp,0,view_xview+50,view_yview+300)
+draw_sprite_ext(sLaserDo,0,view_xview+50,view_yview+300,1,oPlayer.CapillarCooldown/oPlayer.CapillarCooldownMax,0,c_white,1)
 </string>
           </argument>
         </arguments>

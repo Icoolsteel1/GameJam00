@@ -57,7 +57,6 @@
     <instance objName="oCamera" x="0" y="48" name="inst_6CCA682D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oNPCGenerator" x="0" y="16" name="inst_709297E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRoad" x="0" y="504" name="inst_E647C7BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSecurity" x="16" y="400" name="inst_8CE2FD63" locked="0" code="" scaleX="8" scaleY="6" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

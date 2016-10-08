@@ -7,10 +7,129 @@
   <sounds name="sound">
     <sound>sound\sndMusic</sound>
     <sound>sound\snd_ImRich</sound>
+    <sound>sound\snd_missile</sound>
+    <sound>sound\snd_fusil</sound>
+    <sound>sound\snd_crowd_scream</sound>
+    <sound>sound\snd_building_down_01</sound>
+    <sound>sound\snd_building_down_02</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="HUD">
       <sprite>sprites\sHUD_Trump</sprite>
+      <sprite>sprites\sLifebar</sprite>
+      <sprite>sprites\sEnergiebar</sprite>
+      <sprite>sprites\sLaserUp</sprite>
+      <sprite>sprites\sLaserDo</sprite>
+      <sprite>sprites\sCapillarUp</sprite>
     </sprites>
+    <sprites name="Utiliy">
+      <sprite>sprites\sSolid</sprite>
+      <sprite>sprites\sTempBullet</sprite>
+    </sprites>
+    <sprites name="Joueur">
+      <sprite>sprites\sCapillarDo</sprite>
+      <sprite>sprites\sPlayer_Idle</sprite>
+      <sprite>sprites\sPlayer_Jump</sprite>
+      <sprite>sprites\sPlayer_Walk</sprite>
+      <sprite>sprites\sCapillar</sprite>
+      <sprite>sprites\sDtTete</sprite>
+      <sprite>sprites\sDtTeteTriste</sprite>
+      <sprite>sprites\sDtTeteLaser</sprite>
+      <sprite>sprites\sDtTeteCrache</sprite>
+      <sprite>sprites\sDtTeteDommage</sprite>
+      <sprite>sprites\sDtHair</sprite>
+      <sprite>sprites\sLaserBeam</sprite>
+    </sprites>
+    <sprites name="enemy">
+      <sprite>sprites\sEnemyTerre</sprite>
+      <sprite>sprites\sSoldatBullet</sprite>
+      <sprite>sprites\sAlien</sprite>
+      <sprite>sprites\sHelico</sprite>
+      <sprite>sprites\sSoldat</sprite>
+      <sprite>sprites\sSwatCamion</sprite>
+      <sprite>sprites\sSwatCamionPorte</sprite>
+      <sprite>sprites\sHelicoDetruit</sprite>
+      <sprite>sprites\sHelicoMissile</sprite>
+    </sprites>
+    <sprites name="Particles">
+      <sprite>sprites\sNPCSang</sprite>
+      <sprite>sprites\sDollars</sprite>
+      <sprite>sprites\sExplosionHelico</sprite>
+    </sprites>
+    <sprites name="Building">
+      <sprite>sprites\sBuilding01_temp</sprite>
+      <sprite>sprites\sBuilding01</sprite>
+      <sprite>sprites\sbuilding02</sprite>
+      <sprite>sprites\sBuilding03</sprite>
+      <sprite>sprites\sCivil</sprite>
+      <sprite>sprites\sBuilding04</sprite>
+      <sprite>sprites\sBuilding05</sprite>
+      <sprite>sprites\sBuilding06</sprite>
+      <sprite>sprites\sBuilding07</sprite>
+      <sprite>sprites\sVoiture</sprite>
+    </sprites>
+    <sprite>sprites\sFloor</sprite>
+    <sprite>sprites\sSky</sprite>
+    <sprite>sprites\sSky2</sprite>
+    <sprite>sprites\sSky3</sprite>
+    <sprite>sprites\sLampadaire</sprite>
+    <sprite>sprites\sTextAHH</sprite>
+    <sprite>sprites\sRoad2</sprite>
+    <sprite>sprites\sSplash</sprite>
   </sprites>
+  <backgrounds name="background">
+    <background>background\background1</background>
+    <background>background\background2</background>
+  </backgrounds>
+  <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
+  <objects name="objects">
+    <object>objects\oInit</object>
+    <objects name="Utility ">
+      <object>objects\oNPCGenerator</object>
+      <object>objects\oRoad</object>
+      <object>objects\oHUD</object>
+      <object>objects\oCamera</object>
+      <object>objects\oSolid</object>
+      <object>objects\oBuilding_y0</object>
+      <object>objects\oBuilding_y1</object>
+      <object>objects\oBuilding_y2</object>
+      <object>objects\oBuilding_Destroy</object>
+      <object>objects\oVoiture</object>
+      <object>objects\oCivil</object>
+    </objects>
+    <objects name="Joueur">
+      <object>objects\oPlayer</object>
+      <object>objects\oBullet</object>
+      <object>objects\oLaser</object>
+      <object>objects\oCapillar</object>
+    </objects>
+    <objects name="Enemy">
+      <object>objects\oEnemySwat</object>
+      <object>objects\oEnemyBullet</object>
+      <object>objects\oEnemyHapache</object>
+      <object>objects\oEnemyCamionSwat</object>
+      <object>objects\oHelicoMissile</object>
+    </objects>
+    <objects name="Item">
+      <object>objects\oArgentItem</object>
+    </objects>
+    <objects name="Particule">
+      <object>objects\oPartAAHH</object>
+      <object>objects\oNPCSang</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_gameplay</room>
+  </rooms>
+  <help>
+    <rtf>help.rtf</rtf>
+  </help>
+  <TutorialState>
+    <IsTutorial>0</IsTutorial>
+    <TutorialName></TutorialName>
+    <TutorialPage>0</TutorialPage>
+  </TutorialState>
 </assets>
