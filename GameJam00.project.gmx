@@ -15,6 +15,21 @@
     <sound>sound\snd_miniExplode</sound>
     <sound>sound\snd_jump</sound>
     <sound>sound\snd_grounded</sound>
+    <sound>sound\sound10_Trump_Allo</sound>
+    <sound>sound\sound11_Trump_banbangbingbing</sound>
+    <sound>sound\sound12_Trump_bongBong</sound>
+    <sound>sound\sound13_Trump_bouboubou</sound>
+    <sound>sound\sound14_Trump_buwa</sound>
+    <sound>sound\sound15_Trump_ByePing</sound>
+    <sound>sound\sound16_Trump_eeuueueueu</sound>
+    <sound>sound\sound17_Trump_eurk</sound>
+    <sound>sound\sound18_Trump_kechinkechin</sound>
+    <sound>sound\sound19_Trump_lalala</sound>
+    <sound>sound\sound20_Trump_papapa</sound>
+    <sound>sound\sound21_Trump_Ping_kle</sound>
+    <sound>sound\sound22_Trump_pingping</sound>
+    <sound>sound\sound23_Trump_woua</sound>
+    <sound>sound\sound24_Trump_wouinwouin</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="HUD">
