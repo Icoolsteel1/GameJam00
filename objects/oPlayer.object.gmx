@@ -40,7 +40,7 @@ maxArgent = 10000
 
 tete_index = 0
 head_angle = 0
-head_offset = 90
+head_offset = 50
 
 outMap = false
 </string>
@@ -186,7 +186,7 @@ y += vspd
             <string>/// Affiche les têtes du joueur
 
 draw_self()
-draw_sprite_ext(sTete,tete_index,x,y-head_offset,1,1,head_angle,c_white,1)
+draw_sprite_ext(sDtTeteCrache,tete_index,x+(image_xscale*5),y-head_offset,1,image_xscale,head_angle,c_white,1)
 </string>
           </argument>
         </arguments>

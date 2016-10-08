@@ -35,13 +35,13 @@
       <sprite>sprites\sCivilSang</sprite>
       <sprite>sprites\sDollars</sprite>
     </sprites>
-	<sprites name="Building">
+    <sprites name="Building">
       <sprite>sprites\sBuilding01_temp</sprite>
       <sprite>sprites\sBuilding01</sprite>
-      <sprite>sprites\sbuilding02</sprite>
+      <sprite>sprites\sBuilding02</sprite>
       <sprite>sprites\sBuilding03</sprite>
       <sprite>sprites\sCivil</sprite>
-	</sprites>
+    </sprites>
     <sprite>sprites\sFloor</sprite>
     <sprite>sprites\sSky</sprite>
     <sprite>sprites\sSky2</sprite>
