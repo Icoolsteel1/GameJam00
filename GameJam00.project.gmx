@@ -61,6 +61,7 @@
       <sprite>sprites\sDtTeteDommage</sprite>
       <sprite>sprites\sDtHair</sprite>
       <sprite>sprites\sLaserBeam</sprite>
+      <sprite>sprites\sDropArea</sprite>
     </sprites>
     <sprites name="enemy">
       <sprite>sprites\sEnemyTerre</sprite>
@@ -78,6 +79,7 @@
       <sprite>sprites\sNPCSang</sprite>
       <sprite>sprites\sDollars</sprite>
       <sprite>sprites\sExplosionHelico</sprite>
+      <sprite>sprites\sSmoke</sprite>
     </sprites>
     <sprites name="Building">
       <sprite>sprites\sBuilding01_temp</sprite>
@@ -132,6 +134,7 @@
       <object>objects\oBullet</object>
       <object>objects\oLaser</object>
       <object>objects\oCapillar</object>
+      <object>objects\oDropArea</object>
     </objects>
     <objects name="Enemy">
       <object>objects\oEnemySwat</object>
@@ -148,6 +151,7 @@
       <object>objects\oNPCSang</object>
       <object>objects\oExplosionHelico</object>
       <object>objects\oPartSplash</object>
+      <object>objects\oPartSmoke</object>
     </objects>
   </objects>
   <rooms name="rooms">
