@@ -80,7 +80,8 @@ if (irandom(5) == 0) {instance_create(x,y-10,oArgentItem)}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,oEnemyBullet)
+            <string>image_index = 1;
+instance_create(x,y,oEnemyBullet)
 </string>
           </argument>
         </arguments>
@@ -131,6 +132,7 @@ if (place_meeting(x,y,oLaser)) { playerScore += 1 oNPCGenerator.Entity -= 1 inst
 
 if (distance_to_object(oPlayer) &gt; stopDistance) {
     canFire = false
+    image_index = 0;
     if (x &gt; oPlayer.x) {
         x -= spd
     } else {
