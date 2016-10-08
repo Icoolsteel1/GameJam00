@@ -54,7 +54,7 @@ playerDead = false;
           <argument>
             <kind>1</kind>
             <string>
-if keyboard_check(vk_enter)
+if keyboard_check(vk_f1)
 game_restart();
 
 if keyboard_check(vk_escape)
