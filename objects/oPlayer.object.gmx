@@ -141,6 +141,9 @@ if (CapillarCooldown&gt;0){CapillarCooldown--}
 /* Cooldown Cheveux */
 if (FlameCooldown&gt;0){FlameCooldown--}
 
+// Mort
+if ( hp &lt; 0 ) { playerDead = true }
+
 if (!playerDead){
     /* Graviter et saut */
     if (y &lt; 608-70) {

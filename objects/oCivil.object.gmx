@@ -67,6 +67,7 @@ image_xscale = -1;
             <kind>1</kind>
             <string>/// Scream chance
 
+for (i=0;i&lt;=10;i++){instance_create(x,y-16,oPartBlood)}
 instance_create(x,y,oNPCSang);
 if (irandom(3) == 3) {instance_create(x,y-10,oPartAAHH)}
 if (irandom(14) == 0) {instance_create(x,y-10,oArgentItem)}

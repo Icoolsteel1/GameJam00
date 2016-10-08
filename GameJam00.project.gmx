@@ -85,6 +85,7 @@
       <sprite>sprites\sDollars</sprite>
       <sprite>sprites\sExplosionHelico</sprite>
       <sprite>sprites\sSmoke</sprite>
+      <sprite>sprites\sBloodSplash</sprite>
     </sprites>
     <sprites name="Building">
       <sprite>sprites\sBuilding01_temp</sprite>
@@ -156,6 +157,7 @@
       <object>objects\oArgentItem</object>
     </objects>
     <objects name="Particule">
+      <object>objects\oPartBlood</object>
       <object>objects\oPartAAHH</object>
       <object>objects\oNPCSang</object>
       <object>objects\oExplosionHelico</object>
