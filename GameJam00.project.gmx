@@ -101,6 +101,7 @@
     <sprite>sprites\sTextAHH</sprite>
     <sprite>sprites\sRoad2</sprite>
     <sprite>sprites\sSplash</sprite>
+    <sprite>sprites\sForest</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>

@@ -108,7 +108,7 @@ yExplod += 4
 draw_sprite_part(sprite_index,0,0,0-yExplod,sprite_get_width(sprite_index),sprite_get_height(sprite_index),x+random_range(-10,10),y)
 for(i=0;i&lt;15;i++){
     draw_set_color(c_white)
-    draw_sprite_ext(sSmoke,0,x+random_range(0,sprite_get_width(sprite_index)),y+sprite_get_height(sprite_index)-16+(irandom_range(-8,8)),2,2,random_range(0,360),c_white,1)
+    draw_circle(x+random_range(0,sprite_get_width(sprite_index)),y+sprite_get_height(sprite_index)-32,random_range(32,64),false)
 }
 </string>
           </argument>
