@@ -27,9 +27,10 @@
             <kind>1</kind>
             <string>/// Variable global
 
-globalvar playerScore;
+globalvar playerScore, playerDead;
 
-playerScore = 0
+playerScore = 0;
+playerDead = false;
 </string>
           </argument>
         </arguments>
@@ -60,7 +61,10 @@ if keyboard_check(vk_escape)
 game_end();
 
 if keyboard_check(vk_numpad1)
-playerScore += 1;
+playerDead = true;
+
+if keyboard_check(vk_numpad2)
+instance_create(mouse_x,mouse_y,oArgentItem)
 </string>
           </argument>
         </arguments>

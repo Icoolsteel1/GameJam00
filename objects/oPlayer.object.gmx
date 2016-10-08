@@ -33,8 +33,8 @@ spd = 3
 hspd = 0
 vspd = 0
 jspd = 16
-hp = 1000 // vie 
-maxHp = 1000 // vie maximal
+hp = 250 // vie 
+maxHp = 250 // vie maximal
 argent = 1200
 maxArgent = 75000
 
@@ -85,13 +85,14 @@ outMap = false
             <string>/// Animation et autre
 
 /* Image X Scale*/
-
-head_angle = point_direction(x,y-head_offset,mouse_x,mouse_y)
-
-if (mouse_x &lt; x) {
-    image_xscale = -1
-} else {
-    image_xscale = 1
+if (!playerDead){
+    head_angle = point_direction(x,y-head_offset,mouse_x,mouse_y)
+    
+    if (mouse_x &lt; x) {
+        image_xscale = -1
+    } else {
+        image_xscale = 1
+    }
 }
 </string>
           </argument>
@@ -132,105 +133,113 @@ if (LaserCooldown&gt;0){LaserCooldown--}
 /* Cooldown Cheveux */
 if (CapillarCooldown&gt;0){CapillarCooldown--}
 
-
-/* Graviter et saut */
-if (y &lt; 608-70) {
-    sprite_index = sPlayer_Jump
-
-    if ( vspd &lt; 16 ) {
-        vspd += 1
-    }
-} else {
-    vspd = 0
+if (!playerDead){
+    /* Graviter et saut */
+    if (y &lt; 608-70) {
+        sprite_index = sPlayer_Jump
     
-    outMap = false
-    
-    if (jumped){
-        audio_play_sound(sound26_Trump_banbangbingbing2 ,0,0)
-        oCamera.shake = 12
-        inst = instance_create(x,604,oPartSplash)
-        jumped = false
-    }
-    
-    if (keyJump){
-        audio_play_sound(sound23_Trump_woua,0,0)
-        vspd = -jspd
-        jumped = true
-    }
-}
-
-/* Touche directionnel */
-if (vspd == 0 &amp;&amp; !outMap){
-    if (keyLeft) { hspd = -spd sprite_index = sPlayer_Walk image_speed = 0.2}
-    if (keyRight) { hspd = spd sprite_index = sPlayer_Walk image_speed = 0.2}
-    if (!keyLeft &amp;&amp; !keyRight) || (keyLeft &amp;&amp; keyRight) { hspd = 0 sprite_index = sPlayer_Idle image_speed = 0.1}
-}
-
-/* Tirer les projectils */
-if (keyFire) {
-    if (argent &gt; 0) {
-        if (audio_is_playing(sound25_Trump_kechinkechin2)){
-            audio_stop_sound(sound25_Trump_kechinkechin2)
-            audio_play_sound(sound25_Trump_kechinkechin2,0,0)
-        } else {
-            audio_play_sound(sound25_Trump_kechinkechin2,0,0)
+        if ( vspd &lt; 16 ) {
+            vspd += 1
         }
-        bullet = instance_create(x,y-head_offset,oBullet)
-        bullet.image_angle = head_angle
-        argent -= 2+round(playerScore/100)
-        BulletCooldown+=8
+    } else {
+        vspd = 0
+        
+        outMap = false
+        
+        if (jumped){
+            audio_play_sound(sound26_Trump_banbangbingbing2 ,0,0)
+            oCamera.shake = 12
+            inst = instance_create(x,604,oPartSplash)
+            jumped = false
+        }
+        
+        if (keyJump){
+            audio_play_sound(sound23_Trump_woua,0,0)
+            vspd = -jspd
+            jumped = true
+        }
     }
-}
-
-/* Tir Laser */
-if (keyLaser) &amp;&amp; (LaserCooldown&lt;1){
-    LaserActive=1
-    audio_play_sound(snd_ImRich,0,0)
-    head_skin=sDtTeteLaser
-}
-
-if (LaserActive == 1){
-    instance_activate_object(oLaser)
-} else {
-    instance_deactivate_object(oLaser)
-}
-
-/* Tir Capillaire */
-if (keyCapillar) &amp;&amp; (CapillarCooldown&lt;1) 
-    {CapillarActive=1
-    audio_play_sound(sound19_Trump_lalala,0,0)}
-if (CapillarActive == 1)
-    {instance_activate_object(oCapillar)}
-    else{instance_deactivate_object(oCapillar)}
     
-/* Collision */
-if (place_meeting(x+hspd,y,oSolid)){
-    while (!place_meeting(x+sign(hspd),y,oSolid)){
-        x += hspd
+    /* Touche directionnel */
+    if (vspd == 0 &amp;&amp; !outMap){
+        if (keyLeft) { hspd = -spd sprite_index = sPlayer_Walk image_speed = 0.2}
+        if (keyRight) { hspd = spd sprite_index = sPlayer_Walk image_speed = 0.2}
+        if (!keyLeft &amp;&amp; !keyRight) || (keyLeft &amp;&amp; keyRight) { hspd = 0 sprite_index = sPlayer_Idle image_speed = 0.1}
     }
-    hspd = 0
-}
-
-if (x &lt; view_xview) {
-    vspd = -20
-    hspd = 5
-    outMap = true
-}
-
-/*
-if (place_meeting(x,y+vspd,oSolid)){
-    while (!place_meeting(x,y+sign(vspd),oSolid)){
-        y += vspd
+    
+    /* Tirer les projectils */
+    if (keyFire) {
+        if (argent &gt; 0) {
+            if (audio_is_playing(sound25_Trump_kechinkechin2)){
+                audio_stop_sound(sound25_Trump_kechinkechin2)
+                audio_play_sound(sound25_Trump_kechinkechin2,0,0)
+            } else {
+                audio_play_sound(sound25_Trump_kechinkechin2,0,0)
+            }
+            bullet = instance_create(x,y-head_offset,oBullet)
+            bullet.image_angle = head_angle
+            argent -= 2+round(playerScore/100)
+            BulletCooldown+=8
+        }
     }
-    vspd = 0
-    y = round(y)
-}
-*/
-x += hspd
-y += vspd
-
-if (argent &gt; maxArgent) {
-    argent = maxArgent
+    
+    /* Tir Laser */
+    if (keyLaser) &amp;&amp; (LaserCooldown&lt;1) &amp;&amp; (!LaserActive){
+        LaserActive=1
+        audio_play_sound(snd_ImRich,0,0)
+        head_skin=sDtTeteLaser
+    }
+    
+    if (LaserActive == 1){
+        instance_activate_object(oLaser)
+    } else {
+        instance_deactivate_object(oLaser)
+    }
+    
+    /* Tir Capillaire */
+    if (keyCapillar) &amp;&amp; (CapillarCooldown&lt;1) 
+        {CapillarActive=1
+        audio_play_sound(sound19_Trump_lalala,0,0)}
+    if (CapillarActive == 1)
+        {instance_activate_object(oCapillar)}
+        else{instance_deactivate_object(oCapillar)}
+        
+    /* Collision */
+    if (place_meeting(x+hspd,y,oSolid)){
+        while (!place_meeting(x+sign(hspd),y,oSolid)){
+            x += hspd
+        }
+        hspd = 0
+    }
+    
+    if (x &lt; view_xview) {
+        vspd = -20
+        hspd = 5
+        outMap = true
+    }
+    
+    /*
+    if (place_meeting(x,y+vspd,oSolid)){
+        while (!place_meeting(x,y+sign(vspd),oSolid)){
+            y += vspd
+        }
+        vspd = 0
+        y = round(y)
+    }
+    */
+    x += hspd
+    y += vspd
+    
+    if (argent &gt; maxArgent) {
+        argent = maxArgent
+    }
+} else {
+    if (y &lt; 608) {
+    
+        if ( vspd &lt; 16 ) {
+            vspd += 1
+        }
+    }
 }
 </string>
           </argument>
@@ -270,8 +279,13 @@ if(LaserCount==0){LaserCooldown=240}
 
 
 // Tête
-draw_self()
-draw_sprite_ext(head_skin,tete_index,x+(image_xscale*5),y-head_offset,1,image_xscale,head_angle,c_white,1)
+if (!playerDead){
+    draw_self()
+    draw_sprite_ext(head_skin,tete_index,x+(image_xscale*5),y-head_offset,1,image_xscale,head_angle,c_white,1)
+} else {
+    draw_sprite_ext(sprite_index,0,x,y,1,1,90,c_white,1)
+    draw_sprite_ext(head_skin,0,x-head_offset,y,1,1,90,c_white,1)
+}
 </string>
           </argument>
         </arguments>

@@ -92,6 +92,13 @@ if (place_meeting(x,y,oPlayer))
     }
 }
 
+if (place_meeting(x,y,oCapillar)){
+    instance_create(x,y,oExplosionHelico);
+    playerScore += 2
+    oPlayer.argent += 10
+    instance_destroy()
+}
+
 if spd &lt; 5
 spd += 0.2;
 
