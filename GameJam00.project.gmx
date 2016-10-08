@@ -38,7 +38,7 @@
     <sprites name="Building">
       <sprite>sprites\sBuilding01_temp</sprite>
       <sprite>sprites\sBuilding01</sprite>
-      <sprite>sprites\sBuilding02</sprite>
+      <sprite>sprites\sbuilding02</sprite>
       <sprite>sprites\sBuilding03</sprite>
       <sprite>sprites\sCivil</sprite>
     </sprites>
@@ -47,6 +47,7 @@
     <sprite>sprites\sSky2</sprite>
     <sprite>sprites\sSky3</sprite>
     <sprite>sprites\sLampadaire</sprite>
+    <sprite>sprites\sTextAHH</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -77,6 +78,9 @@
     </objects>
     <objects name="Item">
       <object>objects\oArgentItem</object>
+    </objects>
+    <objects name="Particule">
+      <object>objects\oPartAAHH</object>
     </objects>
   </objects>
   <rooms name="rooms">

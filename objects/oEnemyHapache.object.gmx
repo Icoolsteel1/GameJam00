@@ -28,6 +28,7 @@
             <string>distance = irandom_range(0,240)
 spd = 1.2
 canFire = false
+sideGo = -1
 </string>
           </argument>
         </arguments>
@@ -51,6 +52,16 @@ canFire = false
           <argument>
             <kind>1</kind>
             <string>if (place_meeting(x,y,oBullet)){ playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy()}
+
+if (sideGo != -1){
+    if (sideGo == 0) {
+    
+    }
+    
+    if (sideGo == 1){
+        
+    }
+}
 </string>
           </argument>
         </arguments>
