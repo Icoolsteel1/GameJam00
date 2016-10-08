@@ -54,6 +54,10 @@ if (!playerDead){
 } else {
     draw_set_halign(fa_center)
     draw_text_transformed(view_xview+view_wview/2,view_yview+view_hview/2,"Vous ete mort!",4,4,0)
+    draw_text_transformed(view_xview+view_wview/2,view_yview+view_hview/2+64,"Score : " + string(playerScore),4,4,0)
+    if (oInit.canRestart) {
+        draw_text_transformed(view_xview+view_wview/2,view_yview+view_hview-128,"Press 'ENTER' to restart !",4,4,0)
+    }
 }
 </string>
           </argument>
