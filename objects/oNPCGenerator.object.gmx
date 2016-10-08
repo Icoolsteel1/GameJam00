@@ -29,8 +29,6 @@
 
 Entity = 0
 maxEntity = 1200
-
-enemy[0] = oEnemySwat
 </string>
           </argument>
         </arguments>

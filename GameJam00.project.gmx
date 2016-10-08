@@ -32,10 +32,11 @@
       <sprite>sprites\sDtTeteCrache</sprite>
       <sprite>sprites\sDtTeteDommage</sprite>
       <sprite>sprites\sCapillar</sprite>
+      <sprite>sprites\sDtHair</sprite>
     </sprites>
     <sprites name="enemy">
       <sprite>sprites\sEnemyTerre</sprite>
-      <sprite>sprites\sBullet</sprite>
+      <sprite>sprites\sSoldatBullet</sprite>
       <sprite>sprites\sAlien</sprite>
       <sprite>sprites\sHelico</sprite>
       <sprite>sprites\sSoldat</sprite>
@@ -70,6 +71,7 @@
     <sprite>sprites\sTextAHH</sprite>
     <sprite>sprites\sRoad2</sprite>
     <sprite>sprites\sSplash</sprite>
+    <sprite>sprites\sprite48</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -108,6 +110,7 @@
     </objects>
     <objects name="Particule">
       <object>objects\oPartAAHH</object>
+      <object>objects\oPartBuilding</object>
     </objects>
   </objects>
   <rooms name="rooms">
