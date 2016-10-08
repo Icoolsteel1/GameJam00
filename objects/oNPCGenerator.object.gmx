@@ -34,6 +34,68 @@ maxEntity = 1200
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Voiture
+
+if (Entity &lt; maxEntity){
+    var getSide = irandom(1)
+    switch(getSide){
+        case 0: i = instance_create(view_xview-12,650,oVoiture); i.spawn = 1; break;
+        case 1: ii = instance_create(view_xview+view_wview+12,662,oVoiture) ii.spawn = -1; break;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Civils
+
+if (Entity &lt; maxEntity){
+    var getSide = irandom(1)
+    switch(getSide){
+        case 0: i = instance_create(view_xview-12,650,oCivil); i.spawn = 1; break;
+        case 1: ii = instance_create(view_xview+view_wview+12,662,oCivil) ii.spawn = -1; break;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
@@ -118,6 +180,11 @@ if (Entity &lt; maxEntity){
 if (playerScore &gt; 250) {
     if (alarm[1] == -1) { alarm[1] = room_speed*4 }
 }
+
+// voiture
+if alarm[3] == -1
+alarm[3] = random_range(30, 60);
+
 </string>
           </argument>
         </arguments>

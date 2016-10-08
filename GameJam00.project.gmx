@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\sndMusic</sound>
+    <sound>sound\snd_ImRich</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="HUD">
@@ -45,7 +46,7 @@
       <sprite>sprites\sHelicoMissile</sprite>
     </sprites>
     <sprites name="Particles">
-      <sprite>sprites\sCivilSang</sprite>
+      <sprite>sprites\sNPCSang</sprite>
       <sprite>sprites\sDollars</sprite>
       <sprite>sprites\sExplosionHelico</sprite>
     </sprites>
@@ -68,6 +69,7 @@
     <sprite>sprites\sLampadaire</sprite>
     <sprite>sprites\sTextAHH</sprite>
     <sprite>sprites\sRoad2</sprite>
+    <sprite>sprites\sSplash</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -89,6 +91,8 @@
       <object>objects\oBuilding_y1</object>
       <object>objects\oBuilding_y2</object>
       <object>objects\oBuilding_Destroy</object>
+      <object>objects\oVoiture</object>
+      <object>objects\oCivil</object>
     </objects>
     <objects name="Joueur">
       <object>objects\oPlayer</object>
@@ -100,13 +104,15 @@
       <object>objects\oEnemySwat</object>
       <object>objects\oEnemyBullet</object>
       <object>objects\oEnemyHapache</object>
+      <object>objects\oEnemyCamionSwat</object>
+      <object>objects\oHelicoMissile</object>
     </objects>
     <objects name="Item">
       <object>objects\oArgentItem</object>
     </objects>
     <objects name="Particule">
       <object>objects\oPartAAHH</object>
-      <object>objects\oPartBuilding</object>
+      <object>objects\oNPCSang</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -20,11 +20,11 @@
   <width>8</width>
   <height>10</height>
   <frames>
-    <frame index="0">images\sCivilSang_0.png</frame>
-    <frame index="1">images\sCivilSang_1.png</frame>
-    <frame index="2">images\sCivilSang_2.png</frame>
-    <frame index="3">images\sCivilSang_3.png</frame>
-    <frame index="4">images\sCivilSang_4.png</frame>
-    <frame index="5">images\sCivilSang_5.png</frame>
+    <frame index="0">images\sNPCSang_0.png</frame>
+    <frame index="1">images\sNPCSang_1.png</frame>
+    <frame index="2">images\sNPCSang_2.png</frame>
+    <frame index="3">images\sNPCSang_3.png</frame>
+    <frame index="4">images\sNPCSang_4.png</frame>
+    <frame index="5">images\sNPCSang_5.png</frame>
   </frames>
 </sprite>
