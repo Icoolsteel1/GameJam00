@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>image_alpha=0
 Alpha=0.04
+audio_play_sound(THEME_Song, 1, true);
+
 </string>
           </argument>
         </arguments>
