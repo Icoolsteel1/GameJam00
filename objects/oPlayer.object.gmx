@@ -46,6 +46,13 @@ LaserCooldownMax = 240 // Cooldown Laser maximal
 LaserActive = 0
 instance_create(x,y, oLaser)
 
+CapillarCount = 6
+CapillarCooldown = 0 // Cooldown Cheveux
+CapillarCooldownMax = 240 // Cooldown Cheveux Max
+CapillarActive = 0
+instance_create(x,y, oCapillar)
+
+
 tete_index = 0
 head_angle = 0
 head_offset = 50
@@ -111,14 +118,18 @@ keyRight = keyboard_check(ord("D"))
 keyJump = keyboard_check_pressed(vk_space)
 keyFire = mouse_check_button_pressed(mb_left)
 keyLaser = mouse_check_button_pressed(mb_right)
+keyCapillar = keyboard_check(ord("E"))
 
 /* Skin de tête */
 head_skin = sDtTete
 if (LaserActive==1){head_skin = sDtTeteLaser}
+/* Cooldown Bullet */
 if (BulletCooldown&gt;0){BulletCooldown-- head_skin = sDtTeteCrache}
-
 /* Cooldown Laser */
 if (LaserCooldown&gt;0){LaserCooldown--}
+/* Cooldown Cheveux */
+if (CapillarCooldown&gt;0){CapillarCooldown--}
+
 
 /* Graviter et saut */
 if (y &lt; 608-70) {
@@ -155,16 +166,29 @@ if (keyFire) {
 }
 
 /* Tir Laser */
-if (keyLaser) &amp;&amp; (LaserCooldown&lt;1)
-    {
+if (keyLaser) &amp;&amp; (LaserCooldown&lt;1){
     LaserActive=1
+    audio_play_sound(snd_ImRich,0,0)
     head_skin=sDtTeteLaser
-    }
+}
 
-if (LaserActive == 1)
-    {instance_activate_object(oLaser)}
-    else{instance_deactivate_object(oLaser)}
+if (LaserActive == 1){
+    instance_activate_object(oLaser)
+} else {
+    instance_deactivate_object(oLaser)
+}
 
+/* Tir Capillaire */
+if (keyCapillar) &amp;&amp; (CapillarCooldown &lt;1) 
+    {CapillarActive=1}
+if (CapillarActive == 1)
+    {instance_activate_object(oCapillar)
+        with(oCapillar){
+        if(image_index&gt;=image_number)
+        {CapillarCooldown=240}
+        }   
+    } else{instance_deactivate_object(oCapillar)}
+    
 /* Collision */
 if (place_meeting(x+hspd,y,oSolid)){
     while (!place_meeting(x+sign(hspd),y,oSolid)){

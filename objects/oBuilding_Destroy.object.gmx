@@ -54,6 +54,8 @@ yExplod = 0
 
 if (yExplod &gt; sprite_get_height(sprite_index)){
     instance_destroy()
+} else {
+    
 }
 </string>
           </argument>
