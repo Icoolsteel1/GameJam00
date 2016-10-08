@@ -79,7 +79,7 @@ attracted = true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Action des billets
+            <string>/// Action des billets as
 
 if (attracted) {
     if (speed &lt; 20) { speed += 2 }
