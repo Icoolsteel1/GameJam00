@@ -14,6 +14,7 @@
       <sprite>sprites\sEnergiebar</sprite>
       <sprite>sprites\sLaserUp</sprite>
       <sprite>sprites\sLaserDo</sprite>
+      <sprite>sprites\sCapillarDo</sprite>
     </sprites>
     <sprites name="Utiliy">
       <sprite>sprites\sSolid</sprite>
@@ -30,6 +31,7 @@
       <sprite>sprites\sDtTeteLaser</sprite>
       <sprite>sprites\sDtTeteCrache</sprite>
       <sprite>sprites\sDtTeteDommage</sprite>
+      <sprite>sprites\sCapillar</sprite>
     </sprites>
     <sprites name="enemy">
       <sprite>sprites\sEnemyTerre</sprite>
@@ -66,11 +68,8 @@
     <sprite>sprites\sSky3</sprite>
     <sprite>sprites\sLampadaire</sprite>
     <sprite>sprites\sTextAHH</sprite>
-<<<<<<< HEAD
     <sprite>sprites\sRoad2</sprite>
-=======
     <sprite>sprites\sSplash</sprite>
->>>>>>> e820f92c6791f6f2953b27d904723b179b2ecc1d
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -97,6 +96,7 @@
       <object>objects\oPlayer</object>
       <object>objects\oBullet</object>
       <object>objects\oLaser</object>
+      <object>objects\oCapillar</object>
     </objects>
     <objects name="Enemy">
       <object>objects\oEnemySwat</object>
