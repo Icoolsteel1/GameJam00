@@ -166,12 +166,17 @@ if (keyFire) {
 }
 
 /* Tir Laser */
-if (keyLaser) &amp;&amp; (LaserCooldown&lt;1)
-    {LaserActive=1
-    head_skin=sDtTeteLaser}
-if (LaserActive == 1)
-    {instance_activate_object(oLaser)}
-    else{instance_deactivate_object(oLaser)}
+if (keyLaser) &amp;&amp; (LaserCooldown&lt;1){
+    LaserActive=1
+    audio_play_sound(snd_ImRich,0,0)
+    head_skin=sDtTeteLaser
+}
+
+if (LaserActive == 1){
+    instance_activate_object(oLaser)
+} else {
+    instance_deactivate_object(oLaser)
+}
 
 /* Tir Capillaire */
 if (keyCapillar) &amp;&amp; (CapillarCooldown &lt;1) 

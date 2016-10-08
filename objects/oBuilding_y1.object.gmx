@@ -108,6 +108,7 @@ if (proj != noone){
 
 /* Collision Laser */
 if (instance_place(x,y,oLaser)){vie -=1}
+if (instance_place(x,y,oCapillar)){vie -=1}
 
 if (vie &lt; 0) {
     if (buildingType == 1){
