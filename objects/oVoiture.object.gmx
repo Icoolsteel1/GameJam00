@@ -80,22 +80,18 @@ if (distance_to_object(oPlayer) &lt;= stopDistance) // || (distance_to_object(oV
 {
 i = instance_nearest(x,y,oVoiture);
 
-if i.spd == 0 &amp;&amp; ((spawn == 1 &amp;&amp; i.spawn == 1) || (spawn == -1 &amp;&amp; i.spawn == -1)) // A REVOIR !!!
-spd = 0;
-}
-
-else if (distance_to_object(oPlayer) &gt; stopDistance) &amp;&amp; (distance_to_object(oVoiture) &gt; stopDistance)
-{
-spd = 3;
-
-if spawn == 1
-x += spd;
-else if spawn == -1
-{
-x -= spd;
-image_xscale = -1;
-}
-
+/*if i.spd == 0 &amp;&amp; ((spawn == 1 &amp;&amp; i.spawn == 1) || (spawn == -1 &amp;&amp; i.spawn == -1)) // A REVOIR !!!
+spd = 0;*/
+} else if (distance_to_object(oPlayer) &gt; stopDistance) {
+    spd = 3;
+    
+    if spawn == 1
+    x += spd;
+    else if spawn == -1
+    {
+    x -= spd;
+    image_xscale = -1;
+    }
 }
 
 </string>
