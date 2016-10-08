@@ -46,7 +46,7 @@ LaserCooldownMax = 240 // Cooldown Laser maximal
 LaserActive = 0
 instance_create(x,y, oLaser)
 
-CapillarCount = 6
+CapillarCount = 30
 CapillarCooldown = 0 // Cooldown Cheveux
 CapillarCooldownMax = 240 // Cooldown Cheveux Max
 CapillarActive = 0
@@ -118,7 +118,7 @@ keyRight = keyboard_check(ord("D"))
 keyJump = keyboard_check_pressed(vk_space)
 keyFire = mouse_check_button_pressed(mb_left)
 keyLaser = mouse_check_button_pressed(mb_right)
-keyCapillar = keyboard_check(ord("E"))
+keyCapillar = keyboard_check_pressed(ord("E"))
 
 /* Skin de tête */
 head_skin = sDtTete
@@ -174,15 +174,11 @@ if (LaserActive == 1)
     else{instance_deactivate_object(oLaser)}
 
 /* Tir Capillaire */
-if (keyCapillar) &amp;&amp; (CapillarCooldown &lt;1) 
+if (keyCapillar) &amp;&amp; (CapillarCooldown&lt;1) 
     {CapillarActive=1}
 if (CapillarActive == 1)
-    {instance_activate_object(oCapillar)
-        with(oCapillar){
-        if(image_index&gt;=image_number)
-        {CapillarCooldown=240}
-        }   
-    } else{instance_deactivate_object(oCapillar)}
+    {instance_activate_object(oCapillar)}
+    else{instance_deactivate_object(oCapillar)}
     
 /* Collision */
 if (place_meeting(x+hspd,y,oSolid)){
