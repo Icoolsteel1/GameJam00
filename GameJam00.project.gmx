@@ -35,16 +35,26 @@
       <sprite>sprites\sCivilSang</sprite>
       <sprite>sprites\sDollars</sprite>
     </sprites>
+<<<<<<< HEAD
     <sprite>sprites\sBuilding01_temp</sprite>
     <sprite>sprites\sBuilding01</sprite>
     <sprite>sprites\sbuilding02</sprite>
     <sprite>sprites\sBuilding03</sprite>
     <sprite>sprites\sCivil</sprite>
+=======
+    <sprites name="Building">
+      <sprite>sprites\sBuilding01</sprite>
+      <sprite>sprites\sBuilding02</sprite>
+      <sprite>sprites\sBuilding03</sprite>
+    </sprites>
+>>>>>>> 7fb55d464783f5195d5b32df82d82bab52bfa3b7
     <sprite>sprites\sFloor</sprite>
     <sprite>sprites\sSky</sprite>
+    <sprite>sprites\sSky2</sprite>
+    <sprite>sprites\sSky3</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background0</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
