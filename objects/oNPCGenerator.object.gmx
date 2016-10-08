@@ -175,7 +175,7 @@ if (Entity &lt; maxEntity){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var lessWait = playerScore/1500
+            <string>var lessWait = playerScore/500
 
 if (playerScore &gt; 25) {
     if (alarm[0] == -1) { alarm[0] = room_speed*2-lessWait }
