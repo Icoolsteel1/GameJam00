@@ -91,6 +91,7 @@
   <objects name="objects">
     <object>objects\oInit</object>
     <objects name="Utility ">
+      <object>objects\oSecurity</object>
       <object>objects\oNPCGenerator</object>
       <object>objects\oRoad</object>
       <object>objects\oHUD</object>

@@ -137,6 +137,8 @@ if (vie &lt; 0) {
     audio_play_sound(sound[irandom(1)],0,0)
     instance_destroy()
 }
+
+if (place_meeting(x,y,oSecurity)){instance_destroy()}
 </string>
           </argument>
         </arguments>
