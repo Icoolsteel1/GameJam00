@@ -15,6 +15,7 @@
       <sprite>sprites\sEnergiebar</sprite>
       <sprite>sprites\sLaserUp</sprite>
       <sprite>sprites\sLaserDo</sprite>
+      <sprite>sprites\sCapillarUp</sprite>
     </sprites>
     <sprites name="Utiliy">
       <sprite>sprites\sSolid</sprite>
