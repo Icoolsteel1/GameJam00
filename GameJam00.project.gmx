@@ -16,16 +16,32 @@
       <sprite>sprites\sPlayer_Idle</sprite>
       <sprite>sprites\sPlayer_Jump</sprite>
       <sprite>sprites\sPlayer_Walk</sprite>
+      <sprite>sprites\sDtTete</sprite>
+      <sprite>sprites\sDtTeteTriste</sprite>
+      <sprite>sprites\sDtTeteLaser</sprite>
+      <sprite>sprites\sDtTeteCrache</sprite>
+      <sprite>sprites\sDtTeteDommage</sprite>
     </sprites>
     <sprites name="enemy">
       <sprite>sprites\sEnemyTerre</sprite>
       <sprite>sprites\sBullet</sprite>
+      <sprite>sprites\sAlien</sprite>
+      <sprite>sprites\sHelico</sprite>
+      <sprite>sprites\sSoldat</sprite>
+      <sprite>sprites\sSwatCamion</sprite>
+      <sprite>sprites\sSwatCamionPorte</sprite>
     </sprites>
-    <sprites name="Building">
+    <sprites name="Particles">
+      <sprite>sprites\sCivilSang</sprite>
+      <sprite>sprites\sDollars</sprite>
+    </sprites>
+	<sprites name="Building">
+      <sprite>sprites\sBuilding01_temp</sprite>
       <sprite>sprites\sBuilding01</sprite>
-      <sprite>sprites\sBuilding02</sprite>
+      <sprite>sprites\sbuilding02</sprite>
       <sprite>sprites\sBuilding03</sprite>
-    </sprites>
+      <sprite>sprites\sCivil</sprite>
+	</sprites>
     <sprite>sprites\sFloor</sprite>
     <sprite>sprites\sSky</sprite>
     <sprite>sprites\sSky2</sprite>
