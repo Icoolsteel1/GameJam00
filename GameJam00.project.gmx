@@ -13,6 +13,8 @@
     <sound>sound\snd_building_down_01</sound>
     <sound>sound\snd_building_down_02</sound>
     <sound>sound\snd_miniExplode</sound>
+    <sound>sound\snd_jump</sound>
+    <sound>sound\snd_grounded</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="HUD">
