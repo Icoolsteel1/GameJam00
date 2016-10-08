@@ -30,6 +30,7 @@
     <sprite>sprites\sSky</sprite>
     <sprite>sprites\sSky2</sprite>
     <sprite>sprites\sSky3</sprite>
+    <sprite>sprites\sLampadaire</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
