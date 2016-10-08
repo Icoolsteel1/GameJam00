@@ -38,6 +38,8 @@ maxHp = 1000 // vie maximal
 argent = 1200
 maxArgent = 75000
 
+jumped = false; // Quand l'ont fait un saut
+
 BulletCooldown = 0 // Colldown Animation Tête
 
 LaserCount = 120 
@@ -143,8 +145,15 @@ if (y &lt; 608-70) {
     
     outMap = false
     
+    if (jumped){
+        oCamera.shake = 12
+        inst = instance_create(x,604,oPartSplash)
+        jumped = false
+    }
+    
     if (keyJump){
         vspd = -jspd
+        jumped = true
     }
 }
 

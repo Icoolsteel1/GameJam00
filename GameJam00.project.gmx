@@ -12,6 +12,7 @@
     <sound>sound\snd_crowd_scream</sound>
     <sound>sound\snd_building_down_01</sound>
     <sound>sound\snd_building_down_02</sound>
+    <sound>sound\snd_miniExplode</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="HUD">
@@ -120,6 +121,7 @@
       <object>objects\oPartAAHH</object>
       <object>objects\oNPCSang</object>
       <object>objects\oExplosionHelico</object>
+      <object>objects\oPartSplash</object>
     </objects>
   </objects>
   <rooms name="rooms">

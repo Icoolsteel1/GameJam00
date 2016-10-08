@@ -32,6 +32,10 @@ build[1] = sbuilding02
 build[2] = sBuilding04
 build[3] = sBuilding05
 build[4] = sBuilding06
+
+
+sound[0] = snd_building_down_01
+sound[1] = snd_building_down_02
 </string>
           </argument>
         </arguments>
@@ -130,6 +134,7 @@ if (vie &lt; 0) {
     inst = instance_create(x,y,oBuilding_Destroy)
     inst.sprite_index = sprite_index
     playerScore += 10
+    audio_play_sound(sound[irandom(1)],0,0)
     instance_destroy()
 }
 </string>
