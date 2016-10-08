@@ -123,6 +123,7 @@
       <object>objects\oVoiture</object>
       <object>objects\oCivil</object>
       <object>objects\oMenu_Press</object>
+      <object>objects\oMouse</object>
     </objects>
     <objects name="Joueur">
       <object>objects\oPlayer</object>
