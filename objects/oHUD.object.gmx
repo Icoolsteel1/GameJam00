@@ -37,7 +37,7 @@ if (instance_exists(oPlayer)){
     draw_text(view_xview,view_yview+64,"SCORE : " + string(playerScore))
 }
 */
-
+draw_text(view_xview+350,view_yview-20,"FPS = "+string(fps));
 draw_sprite(sHUD_Trump,0,view_xview+10,view_yview+10)
 draw_text(view_xview+150,view_yview+85,string(round(oPlayer.argent)))
 draw_text(view_xview+260,view_yview+85,string(playerScore))

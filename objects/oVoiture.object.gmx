@@ -33,7 +33,7 @@ spawn = 0;
 
 stopDistance = irandom_range(20,50);
 spd = 3;
-vie = 3;
+vie = 2;
 
 if spawn == -1
 image_xscale = -1;
@@ -60,19 +60,39 @@ image_xscale = -1;
           <argument>
             <kind>1</kind>
             <string>
-if (distance_to_object(oPlayer) &lt;= stopDistance) || (distance_to_object(oVoiture) &lt;= stopDistance)
+
+if place_meeting(x,y,oBullet)
+vie -= 1;
+
+
+
+if place_meeting(x,y,oLaser) || place_meeting(x,y,oCapillar)
+vie -= 100;
+
+
+if vie &lt;= 0
+instance_destroy();
+
+
+if (distance_to_object(oPlayer) &lt;= stopDistance) // || (distance_to_object(oVoiture) &lt;= stopDistance)
 {
+i = instance_nearest(x,y,oVoiture);
+
+if i.spd == 0 &amp;&amp; ((spawn == 1 &amp;&amp; i.spawn == 1) || (spawn == -1 &amp;&amp; i.spawn == -1)) // A REVOIR !!!
 spd = 0;
 }
 
-else if (distance_to_object(oPlayer) &gt; stopDistance) || (distance_to_object(oVoiture) &gt; stopDistance)
+else if (distance_to_object(oPlayer) &gt; stopDistance) &amp;&amp; (distance_to_object(oVoiture) &gt; stopDistance)
 {
 spd = 3;
 
 if spawn == 1
 x += spd;
 else if spawn == -1
+{
 x -= spd;
+image_xscale = -1;
+}
 
 }
 

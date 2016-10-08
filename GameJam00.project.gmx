@@ -120,6 +120,7 @@
     <objects name="Particule">
       <object>objects\oPartAAHH</object>
       <object>objects\oNPCSang</object>
+      <object>objects\oExplosionHelico</object>
     </objects>
   </objects>
   <rooms name="rooms">

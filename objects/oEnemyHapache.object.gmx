@@ -25,11 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0.1
+            <string>
+image_speed = 0.1
+
+image_xscale = 2;
+image_yscale = 2;
+
 distance = irandom_range(320,400)
 spd = 3.8
 canFire = false
-sideGo = -1
+sideGo = -1 // -1
+detruit = 0;
+explosion = 0;
 </string>
           </argument>
         </arguments>
@@ -75,8 +82,9 @@ sideGo = -1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-instance_create(x,y,oHelicoMissile)
+            <string>/// Missiles
+
+instance_create(x+20,y+3,oHelicoMissile);
 </string>
           </argument>
         </arguments>
@@ -99,7 +107,8 @@ instance_create(x,y,oHelicoMissile)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>/// Bullets
+
 instance_create(x,y,oEnemyBullet)
 </string>
           </argument>
@@ -123,8 +132,23 @@ instance_create(x,y,oEnemyBullet)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_meeting(x,y,oBullet)){ playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy()}
-if (place_meeting(x,y,oLaser)) { playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy()}
+            <string>
+if (place_meeting(x,y,oBullet)){ playerScore += 1 oNPCGenerator.Entity -= 1; detruit = 1; }
+if (place_meeting(x,y,oLaser)) { playerScore += 1 oNPCGenerator.Entity -= 1; detruit = 1; }
+
+if detruit == 1
+{
+    sprite_index = sHelicoDetruit;
+    
+    if explosion == 0
+    {
+    instance_create(x,y,oExplosionHelico);
+    explosion = 1;
+    }
+    
+    if !place_meeting(x,y-60,oRoad) // tombe
+    y += 4;
+}
 
 if (sideGo != -1){
     if (sideGo == 0) {
@@ -148,10 +172,11 @@ if (sideGo != -1){
 }
 
 // TIR
-if (distance_to_object(oPlayer) &lt; distance){
-    if (alarm[0] = -1) {
+if (distance_to_object(oPlayer) &lt; distance) &amp;&amp; detruit == 0
+{
+    if (alarm[0] = -1)
         alarm[0] = 45
-    }
+        
     if alarm[1] == -1
         alarm[1] = random_range(120,200);
 }

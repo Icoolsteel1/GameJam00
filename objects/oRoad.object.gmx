@@ -37,6 +37,8 @@ switch(index){
     case 2: instance_create(x,320,oBuilding_y1) break;
     case 3: instance_create(x,432,oBuilding_y2) break;
 }
+
+
 </string>
           </argument>
         </arguments>

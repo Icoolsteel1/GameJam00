@@ -28,7 +28,7 @@
             <string>/// Creation de l'instance
 
 image_speed = 0
-stopDistance = irandom_range(60,120)
+stopDistance = irandom_range(300,400)
 spd = 1.2
 canFire = false
 vie=1

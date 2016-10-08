@@ -144,7 +144,7 @@ if (Entity &lt; maxEntity){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Create unity
+            <string>/// Create unity SWAT
 
 if (Entity &lt; maxEntity){
     var getSide = irandom(1)
@@ -189,7 +189,7 @@ alarm[3] = random_range(30, 60);
 
 // civils
 if alarm[2] == -1
-alarm[2] = random_range(10,35);
+alarm[2] = random_range(20,50);
 
 </string>
           </argument>
