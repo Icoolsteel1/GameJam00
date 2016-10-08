@@ -86,7 +86,7 @@ if (attracted) {
     move_towards_point(oPlayer.x,oPlayer.y,speed)
     if (place_meeting(x,y,oPlayer)){
         if (oPlayer.hp &lt; oPlayer.maxHp){
-            oPlayer.hp += 5
+            oPlayer.hp += 2
         } else { 
             oPlayer.argent += 10+(playerScore/50) 
         }
