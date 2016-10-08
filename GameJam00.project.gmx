@@ -6,6 +6,11 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprites name="HUD">
+      <sprite>sprites\sHUD_Trump</sprite>
+      <sprite>sprites\sLifebar</sprite>
+      <sprite>sprites\sEnergiebar</sprite>
+    </sprites>
     <sprites name="Utiliy">
       <sprite>sprites\sSolid</sprite>
       <sprite>sprites\sTempBullet</sprite>
