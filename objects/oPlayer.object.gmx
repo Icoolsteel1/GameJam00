@@ -35,8 +35,8 @@ vspd = 0
 jspd = 16
 hp = 1000 // vie 
 maxHp = 1000 // vie maximal
-argent = 5000
-maxArgent = 10000
+argent = 75000
+maxArgent = 75000
 
 tete_index = 0
 head_angle = 0
@@ -132,7 +132,7 @@ if (keyFire) {
     if (argent &gt; 0) {
         bullet = instance_create(x,y-head_offset,oBullet)
         bullet.image_angle = head_angle
-        argent -= 10
+        argent -= 2+round(playerScore/100)
     }
 }
 
@@ -161,6 +161,10 @@ if (place_meeting(x,y+vspd,oSolid)){
 */
 x += hspd
 y += vspd
+
+if (argent &gt; maxArgent) {
+    argent = maxArgent
+}
 </string>
           </argument>
         </arguments>

@@ -103,7 +103,7 @@ if (proj != noone){
 
 if (vie &lt; 0) {
     if (buildingType == 1){
-        for (i=0;i&lt;50;i++){
+        for (i=0;i&lt;10+round(playerScore/10);i++){
             instance_create(x+irandom_range(0,sprite_get_width(sprite_index)), y+irandom_range(0,sprite_get_height(sprite_index)-120), oArgentItem)
         }
     }

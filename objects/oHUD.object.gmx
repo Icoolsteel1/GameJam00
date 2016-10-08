@@ -27,11 +27,20 @@
             <kind>1</kind>
             <string>/// Affiche tout les information 
 
+draw_set_color(c_black)
+draw_set_font(font0)
+
+/*
 if (instance_exists(oPlayer)){
-    draw_text(view_xview,view_yview,"ARGENT : " + string(oPlayer.argent))
+    
     draw_text(view_xview,view_yview+32,"VIE : " + string(oPlayer.hp))
     draw_text(view_xview,view_yview+64,"SCORE : " + string(playerScore))
 }
+*/
+
+draw_sprite(sHUD_Trump,0,view_xview+10,view_yview+10)
+draw_text(view_xview+150,view_yview+85,string(round(oPlayer.argent)))
+draw_text(view_xview+260,view_yview+85,string(playerScore))
 </string>
           </argument>
         </arguments>

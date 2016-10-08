@@ -59,6 +59,9 @@
     <background>background\background2</background>
   </backgrounds>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <object>objects\oInit</object>
     <objects name="Utility ">
