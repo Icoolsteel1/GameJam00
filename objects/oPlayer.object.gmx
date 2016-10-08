@@ -146,7 +146,7 @@ if (y &lt; 608-70) {
     outMap = false
     
     if (jumped){
-        audio_play_sound(snd_grounded,0,0)
+        audio_play_sound(sound26_Trump_banbangbingbing2 ,0,0)
         oCamera.shake = 12
         inst = instance_create(x,604,oPartSplash)
         jumped = false
@@ -169,6 +169,12 @@ if (vspd == 0 &amp;&amp; !outMap){
 /* Tirer les projectils */
 if (keyFire) {
     if (argent &gt; 0) {
+        if (audio_is_playing(sound25_Trump_kechinkechin2)){
+            audio_stop_sound(sound25_Trump_kechinkechin2)
+            audio_play_sound(sound25_Trump_kechinkechin2,0,0)
+        } else {
+            audio_play_sound(sound25_Trump_kechinkechin2,0,0)
+        }
         bullet = instance_create(x,y-head_offset,oBullet)
         bullet.image_angle = head_angle
         argent -= 2+round(playerScore/100)
