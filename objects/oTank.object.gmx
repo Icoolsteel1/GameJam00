@@ -33,7 +33,7 @@ image_speed = 0.2
 stopDistance = irandom_range(300,400)
 spd = 2.4
 canFire = false
-vie=1
+vie=3
 </string>
           </argument>
         </arguments>
@@ -108,10 +108,16 @@ instance_create(canon.x,canon.y,oEnemyBullet)
           <argument>
             <kind>1</kind>
             <string>/// Mort du personnage
-if (place_meeting(x,y,oPlayer)){ playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy()}
-if (place_meeting(x,y,oBullet)){ playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy()}
-if (place_meeting(x,y,oLaser)) { playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy()}
-if (place_meeting(x,y,oCapillar)) { playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy()}
+if (place_meeting(x,y,oPlayer)){ playerScore += 1 vie-=1}
+if (place_meeting(x,y,oBullet)){ playerScore += 1 vie-=1}
+if (place_meeting(x,y,oLaser)) { playerScore += 1 vie-=1}
+if (place_meeting(x,y,oCapillar)) { playerScore += 1 vie-=1}
+
+
+if (vie &lt;= 0){
+    oNPCGenerator.Entity -= 1 
+    instance_destroy()
+}
 </string>
           </argument>
         </arguments>
