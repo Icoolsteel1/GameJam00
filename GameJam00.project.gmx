@@ -45,6 +45,7 @@
     <sprites name="Utiliy">
       <sprite>sprites\sSolid</sprite>
       <sprite>sprites\sTempBullet</sprite>
+      <sprite>sprites\sMenu_Press</sprite>
     </sprites>
     <sprites name="Joueur">
       <sprite>sprites\sCapillarDo</sprite>
@@ -121,6 +122,7 @@
       <object>objects\oBuilding_Destroy</object>
       <object>objects\oVoiture</object>
       <object>objects\oCivil</object>
+      <object>objects\oMenu_Press</object>
     </objects>
     <objects name="Joueur">
       <object>objects\oPlayer</object>
@@ -146,6 +148,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_menu</room>
     <room>rooms\rm_gameplay</room>
   </rooms>
   <help>
