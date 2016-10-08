@@ -60,7 +60,7 @@ if (yExplod &gt; sprite_get_height(sprite_index)){
 
 for(i=0;i&lt;5;i++){
     inst = instance_create(x+random(sprite_get_width(sprite_index)), y+sprite_get_height(sprite_index)-25,oPartBuilding)
-    inst.index = sprite_index
+    inst.sprite_index = sprite_index
 }
 </string>
           </argument>
