@@ -30,10 +30,11 @@
       <sprite>sprites\sDtTeteLaser</sprite>
       <sprite>sprites\sDtTeteCrache</sprite>
       <sprite>sprites\sDtTeteDommage</sprite>
+      <sprite>sprites\sDtHair</sprite>
     </sprites>
     <sprites name="enemy">
       <sprite>sprites\sEnemyTerre</sprite>
-      <sprite>sprites\sBullet</sprite>
+      <sprite>sprites\sSoldatBullet</sprite>
       <sprite>sprites\sAlien</sprite>
       <sprite>sprites\sHelico</sprite>
       <sprite>sprites\sSoldat</sprite>
