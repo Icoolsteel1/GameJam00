@@ -32,8 +32,8 @@ alarm[0] = room_speed*2
 
 index = sprite_index
 
-partX = random(sprite_get_width(index))
-partY = random(sprite_get_height(index))
+partX = random(sprite_get_width(sprite_index))
+partY = random(sprite_get_height(sprite_index))
 </string>
           </argument>
         </arguments>
@@ -85,7 +85,7 @@ partY = random(sprite_get_height(index))
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="73">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -102,7 +102,7 @@ partY = random(sprite_get_height(index))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self()
+            <string>//draw_self()
 draw_sprite_part(sprite_index,0,partX,partY,12,12,x,y)
 //draw_rectangle(x,y,x+12,y+12,false)
 </string>
