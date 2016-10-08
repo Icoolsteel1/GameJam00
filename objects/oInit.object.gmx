@@ -27,10 +27,11 @@
             <kind>1</kind>
             <string>/// Variable global
 
-globalvar playerScore, playerDead;
+globalvar playerScore, playerDead, roomLock;
 
 playerScore = 0;
 playerDead = false;
+roomLock = false;
 
 // 
 canRestart = false;
@@ -82,8 +83,13 @@ canRestart = false;
             <string>if keyboard_check(vk_escape)
 game_end();
 
-if keyboard_check(vk_numpad1)
-playerDead = true;
+if keyboard_check(vk_numpad1){
+    if (!roomLock){
+        roomLock = true
+    } else {
+        roomLock = false
+    }
+}
 
 if keyboard_check(vk_numpad2)
 instance_create(mouse_x,mouse_y,oArgentItem)
