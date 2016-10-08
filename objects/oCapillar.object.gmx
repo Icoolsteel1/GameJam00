@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=.3
+            <string>image_speed=.5
 </string>
           </argument>
         </arguments>
@@ -50,8 +50,6 @@
             <kind>1</kind>
             <string>x=oPlayer.x
 y=oPlayer.y-45
-image_xscale=1
-image_yscale=1
 image_angle=point_direction(x,y, mouse_x,mouse_y)
 
 
@@ -59,11 +57,9 @@ if (oPlayer.CapillarActive==1) &amp;&amp; (oPlayer.CapillarCount &gt;0){
 
 if(mouse_x&lt;oPlayer.x){image_yscale=-1}
 
-
-
 oPlayer.CapillarCount--
 if (oPlayer.CapillarCount==0){oPlayer.CapillarCooldown=240}
-} else {oPlayer.CapillarCount=30 oPlayer.CapillarActive=0 image_index=0}
+} else {oPlayer.CapillarCount=30 oPlayer.CapillarActive=0}
 </string>
           </argument>
         </arguments>
