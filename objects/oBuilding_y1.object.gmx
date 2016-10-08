@@ -29,6 +29,9 @@
 
 build[0] = sBuilding01
 build[1] = sbuilding02
+build[2] = sBuilding04
+build[3] = sBuilding05
+build[4] = sBuilding06
 </string>
           </argument>
         </arguments>

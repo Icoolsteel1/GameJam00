@@ -29,13 +29,13 @@
 
 /* Ajoute un batiment */
 randomize()
-index = irandom(3)
+index = irandom(0)
 
 switch(index){
     case 0: break;
-    case 1: instance_create(x,304,oBuilding_y0) break;
-    case 2: instance_create(x,352,oBuilding_y1) break;
-    case 3: instance_create(x,464,oBuilding_y2) break;
+    case 1: instance_create(x,272,oBuilding_y0) break;
+    case 2: instance_create(x,320,oBuilding_y1) break;
+    case 3: instance_create(x,432,oBuilding_y2) break;
 }
 </string>
           </argument>
