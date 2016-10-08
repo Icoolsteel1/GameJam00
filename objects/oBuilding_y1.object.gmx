@@ -115,6 +115,10 @@ if (vie &lt; 0) {
             }
         }
         
+    } else {
+        for (i=0;i&lt;irandom(10);i++){
+            instance_create(x+irandom_range(0,sprite_get_width(sprite_index)), y+irandom_range(0,sprite_get_height(sprite_index)-120), oArgentItem)
+        }
     }
     inst = instance_create(x,y,oBuilding_Destroy)
     inst.sprite_index = sprite_index

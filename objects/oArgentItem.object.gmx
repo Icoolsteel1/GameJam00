@@ -85,7 +85,11 @@ if (attracted) {
     if (speed &lt; 20) { speed += 2 }
     move_towards_point(oPlayer.x,oPlayer.y,speed)
     if (place_meeting(x,y,oPlayer)){
-        if (oPlayer.argent &lt; oPlayer.maxArgent){ oPlayer.argent += 10+(playerScore/50) } else { playerScore += 1 }
+        if (oPlayer.hp != oPlayer.maxHp){
+            oPlayer.hp += 1
+        } else { 
+            oPlayer.argent += 10+(playerScore/50) 
+        }
         playerScore += 1
         instance_destroy()
     }

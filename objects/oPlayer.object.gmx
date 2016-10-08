@@ -35,7 +35,7 @@ vspd = 0
 jspd = 16
 hp = 1000 // vie 
 maxHp = 1000 // vie maximal
-argent = 75000
+argent = 1200
 maxArgent = 75000
 
 tete_index = 0
