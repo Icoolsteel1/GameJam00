@@ -28,8 +28,8 @@
             <string>/// Affiche tout les information 
 
 if (instance_exists(oPlayer)){
-    draw_text(0,0,"ARGENT : " + string(oPlayer.argent))
-    draw_text(0,32,"VIE : " + string(oPlayer.hp))
+    draw_text(view_xview,view_yview,"ARGENT : " + string(oPlayer.argent))
+    draw_text(view_xview,view_yview+32,"VIE : " + string(oPlayer.hp))
 }
 </string>
           </argument>

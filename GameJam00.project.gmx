@@ -21,10 +21,11 @@
       <sprite>sprites\sEnemyTerre</sprite>
       <sprite>sprites\sBullet</sprite>
     </sprites>
-    <sprite>sprites\sBuilding01_temp</sprite>
-    <sprite>sprites\sBuilding01</sprite>
-    <sprite>sprites\sbuilding02</sprite>
-    <sprite>sprites\sBuilding03</sprite>
+    <sprites name="Building">
+      <sprite>sprites\sBuilding01</sprite>
+      <sprite>sprites\sBuilding02</sprite>
+      <sprite>sprites\sBuilding03</sprite>
+    </sprites>
     <sprite>sprites\sFloor</sprite>
     <sprite>sprites\sSky</sprite>
   </sprites>

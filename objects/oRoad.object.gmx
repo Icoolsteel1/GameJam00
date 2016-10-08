@@ -28,6 +28,7 @@
             <string>/// Creation de l'objet
 
 /* Ajoute un batiment */
+randomize()
 index = irandom(3)
 
 switch(index){
