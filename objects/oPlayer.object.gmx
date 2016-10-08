@@ -220,16 +220,16 @@ if (argent &gt; maxArgent) {
 
 // Laser
 if (LaserActive==1) &amp;&amp; (LaserCount &gt; 0){
-
 draw_set_color(c_white)
-draw_line_width(x+(image_xscale*5),y-20-head_offset,mouse_x,mouse_y,random_range(6,9))
+draw_line_width(x+lengthdir_x(0,image_angle),y-head_offset-40+lengthdir_y(0,image_angle),mouse_x,mouse_y,random_range(6,9))
 draw_set_color(c_red)
-draw_line_width(x+(image_xscale*5),y-20-head_offset,mouse_x,mouse_y,random_range(2,4))
+draw_line_width(x+lengthdir_x(0,image_angle),y-head_offset-40+lengthdir_y(0,image_angle),mouse_x,mouse_y,random_range(2,4))
 draw_set_color(c_white)
 
 LaserCount--
 if(LaserCount==0){LaserCooldown=240}
 } else {LaserCount=120; LaserActive=0}
+
 
 // Tête
 draw_self()
