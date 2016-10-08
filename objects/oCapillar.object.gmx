@@ -56,7 +56,7 @@ if (oPlayer.CapillarActive==1) &amp;&amp; (oPlayer.CapillarCount &gt;0)
 {
 oPlayer.CapillarCount--
 
-if (oPlayer.CapillarCount==0){oPlayer.CapillarActive=0; oPlayer.CapillarCount=10}
+if (oPlayer.CapillarCount==0){oPlayer.CapillarActive=0; oPlayer.CapillarCount=10; CapillarCooldown=240}
 }
 </string>
           </argument>
