@@ -68,6 +68,7 @@
     <sprite>sprites\sLampadaire</sprite>
     <sprite>sprites\sTextAHH</sprite>
     <sprite>sprites\sRoad2</sprite>
+    <sprite>sprites\sprite48</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -105,6 +106,7 @@
     </objects>
     <objects name="Particule">
       <object>objects\oPartAAHH</object>
+      <object>objects\oPartBuilding</object>
     </objects>
   </objects>
   <rooms name="rooms">
