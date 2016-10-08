@@ -28,7 +28,6 @@
             <string>/// Affiche tout les information 
 
 draw_set_color(c_black)
-draw_set_font(font0)
 
 /*
 if (instance_exists(oPlayer)){
@@ -38,7 +37,9 @@ if (instance_exists(oPlayer)){
 }
 */
 if (!playerDead){
-    draw_text(view_xview+350,view_yview-20,"FPS = "+string(fps));
+    draw_set_font(fnt_wolf)
+    draw_set_halign(fa_left)
+    draw_text(view_xview+350,view_yview+20,"FPS = "+string(fps));
     draw_sprite(sHUD_Trump,0,view_xview+10,view_yview+10)
     draw_text(view_xview+150,view_yview+85,string(round(oPlayer.argent)))
     draw_text(view_xview+260,view_yview+85,string(playerScore))
@@ -52,6 +53,7 @@ if (!playerDead){
     draw_sprite(sCapillarUp,0,view_xview+50,view_yview+300)
     draw_sprite_ext(sLaserDo,0,view_xview+50,view_yview+300,1,oPlayer.CapillarCooldown/oPlayer.CapillarCooldownMax,0,c_white,1)
 } else {
+    draw_set_font(fnt_arial)
     draw_set_halign(fa_center)
     draw_text_transformed(view_xview+view_wview/2,view_yview+view_hview/2,"Vous ete mort!",4,4,0)
     draw_text_transformed(view_xview+view_wview/2,view_yview+view_hview/2+64,"Score : " + string(playerScore),4,4,0)

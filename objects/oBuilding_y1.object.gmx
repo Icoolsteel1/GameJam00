@@ -78,7 +78,7 @@ if (buildingType == 1){
 
 vie = choose(3,5,7)
 
-maxCashSpawn = 100
+maxCashSpawn = 25
 </string>
           </argument>
         </arguments>
@@ -117,7 +117,7 @@ if (instance_place(x,y,oCapillar)){vie -=1}
 if (vie &lt; 0) {
     if (buildingType == 1){
         if (playerScore/10 &gt;= maxCashSpawn){
-           for (i=0;i&lt;100;i++){
+           for (i=0;i&lt;25;i++){
                 instance_create(x+irandom_range(0,sprite_get_width(sprite_index)), y+irandom_range(0,sprite_get_height(sprite_index)-120), oArgentItem)
             } 
         } else {

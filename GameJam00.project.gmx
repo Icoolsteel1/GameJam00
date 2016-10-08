@@ -74,6 +74,10 @@
       <sprite>sprites\sSwatCamionPorte</sprite>
       <sprite>sprites\sHelicoDetruit</sprite>
       <sprite>sprites\sHelicoMissile</sprite>
+      <sprites name="Tank">
+        <sprite>sprites\sTankBody</sprite>
+        <sprite>sprites\sTankCanon</sprite>
+      </sprites>
     </sprites>
     <sprites name="Particles">
       <sprite>sprites\sNPCSang</sprite>
@@ -109,7 +113,8 @@
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
-    <font>fonts\font0</font>
+    <font>fonts\fnt_wolf</font>
+    <font>fonts\fnt_arial</font>
   </fonts>
   <objects name="objects">
     <object>objects\oInit</object>
@@ -142,6 +147,8 @@
       <object>objects\oEnemyHapache</object>
       <object>objects\oEnemyCamionSwat</object>
       <object>objects\oHelicoMissile</object>
+      <object>objects\oTank</object>
+      <object>objects\oTankCanon</object>
     </objects>
     <objects name="Item">
       <object>objects\oArgentItem</object>
