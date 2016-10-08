@@ -34,13 +34,16 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
+    <background>background\background2</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\oInit</object>
-    <object>objects\oHUD</object>
-    <object>objects\oCamera</object>
     <objects name="Utility ">
+      <object>objects\oNPCGenerator</object>
+      <object>objects\oRoad</object>
+      <object>objects\oHUD</object>
+      <object>objects\oCamera</object>
       <object>objects\oSolid</object>
       <object>objects\oBuilding_y0</object>
       <object>objects\oBuilding_y1</object>
@@ -52,13 +55,13 @@
       <object>objects\oBullet</object>
     </objects>
     <objects name="Enemy">
-      <object>objects\oEnemySWAT</object>
+      <object>objects\oEnemySwat</object>
       <object>objects\oEnemyBullet</object>
+      <object>objects\oEnemyHapache</object>
     </objects>
     <objects name="Item">
       <object>objects\oArgentItem</object>
     </objects>
-    <object>objects\oRoad</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_gameplay</room>

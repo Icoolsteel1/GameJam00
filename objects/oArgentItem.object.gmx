@@ -86,6 +86,7 @@ if (attracted) {
     move_towards_point(oPlayer.x,oPlayer.y,speed)
     if (place_meeting(x,y,oPlayer)){
         oPlayer.argent += 50
+        playerScore += 1
         instance_destroy()
     }
 } else {

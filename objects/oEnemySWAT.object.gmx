@@ -28,7 +28,7 @@
             <string>/// Creation de l'instance
 
 stopDistance = irandom_range(60,120)
-spd = 0.4
+spd = 1.2
 canFire = false
 </string>
           </argument>
@@ -77,8 +77,8 @@ canFire = false
             <kind>1</kind>
             <string>/// Mort du personnage
 
-if (place_meeting(x,y,oBullet)){instance_destroy()}
-if (place_meeting(x,y,oPlayer)){instance_destroy()}
+if (place_meeting(x,y,oBullet)){ playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy()}
+if (place_meeting(x,y,oPlayer)){ playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy()}
 </string>
           </argument>
         </arguments>
