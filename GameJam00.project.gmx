@@ -42,6 +42,7 @@
       <sprite>sprites\sLaserUp</sprite>
       <sprite>sprites\sLaserDo</sprite>
       <sprite>sprites\sCapillarUp</sprite>
+      <sprite>sprites\sDollarUp</sprite>
     </sprites>
     <sprites name="Utiliy">
       <sprite>sprites\sSolid</sprite>

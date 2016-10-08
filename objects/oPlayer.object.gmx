@@ -55,8 +55,8 @@ CapillarActive = 0
 instance_create(x,y, oCapillar)
 
 FlameCount = 90 
-FlameCooldown = 0 // Cooldown Laser
-FlameCooldownMax = 240 // Cooldown Laser maximal
+FlameCooldown = 0 // Cooldown Flame
+FlameCooldownMax = 360 // Cooldown Flame maximal
 FlameActive = 0
 instance_create(x,y, oLaser)
 
@@ -222,7 +222,7 @@ if (!playerDead){
             head_skin = sDtTeteCrache
             FlameActive=1
             FlameCount--
-            if(FlameCount==0){FlameCooldown=120; FlameCount=90; FlameActive = 0}
+            if(FlameCount==0){FlameCooldown=360; FlameCount=90; FlameActive = 0}
             bullet = instance_create(x,y-head_offset+(random_range(-25,25)),oBullet)
             bullet.image_angle = head_angle+random_range(-100,100)
             argent -= 1+round(playerScore/100)

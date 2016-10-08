@@ -52,6 +52,10 @@ if (!playerDead){
     
     draw_sprite(sCapillarUp,0,view_xview+50,view_yview+300)
     draw_sprite_ext(sLaserDo,0,view_xview+50,view_yview+300,1,oPlayer.CapillarCooldown/oPlayer.CapillarCooldownMax,0,c_white,1)
+    
+    draw_sprite(sDollarUp,0,view_xview+50,view_yview+370)
+    draw_sprite_ext(sLaserDo,0,view_xview+50,view_yview+406,1,oPlayer.FlameCooldown/oPlayer.FlameCooldownMax,0,c_white,1)
+    
 } else {
     draw_set_font(fnt_arial)
     draw_set_halign(fa_center)
