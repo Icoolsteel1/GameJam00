@@ -20,11 +20,11 @@
       <sprite>sprites\sTempBullet</sprite>
     </sprites>
     <sprites name="Joueur">
-      <sprite>sprites\sPlayer</sprite>
-      <sprite>sprites\sTete</sprite>
+      <sprite>sprites\sCapillarDo</sprite>
       <sprite>sprites\sPlayer_Idle</sprite>
       <sprite>sprites\sPlayer_Jump</sprite>
       <sprite>sprites\sPlayer_Walk</sprite>
+      <sprite>sprites\sCapillar</sprite>
       <sprite>sprites\sDtTete</sprite>
       <sprite>sprites\sDtTeteTriste</sprite>
       <sprite>sprites\sDtTeteLaser</sprite>
@@ -68,7 +68,6 @@
     <sprite>sprites\sLampadaire</sprite>
     <sprite>sprites\sTextAHH</sprite>
     <sprite>sprites\sRoad2</sprite>
-    <sprite>sprites\sprite48</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -95,6 +94,7 @@
       <object>objects\oPlayer</object>
       <object>objects\oBullet</object>
       <object>objects\oLaser</object>
+      <object>objects\oCapillar</object>
     </objects>
     <objects name="Enemy">
       <object>objects\oEnemySwat</object>
