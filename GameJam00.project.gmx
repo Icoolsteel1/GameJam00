@@ -46,6 +46,10 @@
       <sprite>sprites\sbuilding02</sprite>
       <sprite>sprites\sBuilding03</sprite>
       <sprite>sprites\sCivil</sprite>
+      <sprite>sprites\sBuilding04</sprite>
+      <sprite>sprites\sBuilding05</sprite>
+      <sprite>sprites\sBuilding06</sprite>
+      <sprite>sprites\sBuilding07</sprite>
     </sprites>
     <sprite>sprites\sFloor</sprite>
     <sprite>sprites\sSky</sprite>
