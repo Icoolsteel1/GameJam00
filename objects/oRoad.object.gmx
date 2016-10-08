@@ -29,7 +29,7 @@
 
 /* Ajoute un batiment */
 randomize()
-index = irandom(0)
+index = irandom(3)
 
 switch(index){
     case 0: break;
