@@ -82,15 +82,28 @@ image_speed = 0.3;
           <argument>
             <kind>1</kind>
             <string>
+if (place_meeting(x,y,oPlayer))
+{ 
+    instance_create(x,y,oExplosionHelico);
+    instance_destroy();
+    with(oPlayer)
+    {
+        hp -= 15;
+    }
+}
+
 if spd &lt; 5
 spd += 0.2;
 
 image_angle = direction;
 
+if spd &gt; 1
 move_towards_point(oPlayer.x,oPlayer.y,spd);
 
 if place_meeting(x,y,oPlayer)
 instance_destroy();
+
+
 </string>
           </argument>
         </arguments>

@@ -50,7 +50,7 @@ speed = 16
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (y &gt; 604){
+            <string>if (y &gt; 700){
     instance_destroy()
 }
 </string>
