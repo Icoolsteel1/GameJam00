@@ -53,9 +53,14 @@ if (!playerDead){
     draw_sprite(sCapillarUp,0,view_xview+50,view_yview+300)
     draw_sprite_ext(sLaserDo,0,view_xview+50,view_yview+300,1,oPlayer.CapillarCooldown/oPlayer.CapillarCooldownMax,0,c_white,1)
     
-    draw_sprite(sDollarUp,0,view_xview+50,view_yview+350)
+    draw_sprite(sDollarUp,0,view_xview+30,view_yview+350)
     draw_sprite_ext(sLaserDo,0,view_xview+50,view_yview+386,1,oPlayer.FlameCooldown/oPlayer.FlameCooldownMax,0,c_white,1)
     
+    draw_set_halign(fa_right)
+    draw_set_color(c_white)
+    draw_text(view_xview+view_wview-30,view_yview+50,"'F1' For INFO")
+    draw_set_halign(fa_left)
+
 } else {
     draw_set_font(fnt_arial)
     draw_set_halign(fa_center)
