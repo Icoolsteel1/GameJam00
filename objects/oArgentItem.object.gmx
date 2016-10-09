@@ -87,9 +87,10 @@ if (attracted) {
     if (place_meeting(x,y,oPlayer)){
         if (oPlayer.hp &lt; oPlayer.maxHp){
             oPlayer.hp += 2
-        } else { 
-            oPlayer.argent += 10+(playerScore/50) 
         }
+        
+        oPlayer.argent += 10+(playerScore/50) 
+        
         playerScore += 1
         instance_destroy()
     }
