@@ -52,7 +52,7 @@
 
 if (!roomLock){
     if (oPlayer.x &gt; view_xview+view_wview/2) {
-        view_xview = oPlayer.x-view_wview/2+2
+        view_xview += oPlayer.spd
     }
 }
 

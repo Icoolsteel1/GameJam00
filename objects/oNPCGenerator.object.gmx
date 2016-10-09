@@ -292,7 +292,7 @@ if (!playerDead){
     }
     
     if (playerScore &gt; 800) { // Spawn Alien
-        if (alarm[5] == -1) { alarm[5] = (room_speed*4)-lessWait-onLock  }
+        if (alarm[5] == -1) { alarm[5] = (room_speed*8)-lessWait-onLock  }
     }
     
     // voiture
