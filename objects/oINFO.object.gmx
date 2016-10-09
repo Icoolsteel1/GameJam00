@@ -62,12 +62,15 @@ draw_set_alpha(1)
 draw_set_color(c_white)
 draw_sprite(sLaserUp,0,view_xview+200,view_yview-30+AnimeY)
 draw_text(view_xview+250,view_yview-100+AnimeY,"With the LaserTrump you can#shoot anywhere on everything.")
+draw_text(view_xview+163,view_yview-17+AnimeY,"Right Clic")
 
 draw_sprite(sCapillarUp,0,view_xview+575,view_yview-30+AnimeY)
 draw_text(view_xview+625,view_yview-100+AnimeY,"With the Hair Whip you can#destroy missile and building")
+draw_text(view_xview+550,view_yview-17+AnimeY,"'E' key")
 
 draw_sprite(sDollarUp,0,view_xview+950,view_yview-66+AnimeY)
 draw_text(view_xview+1000,view_yview-100+AnimeY,"With the Dollar you can#make apocalypse around you")
+draw_text(view_xview+926,view_yview-17+AnimeY,"'F' key")
 
 draw_sprite(sDollars,0,view_xview+670,view_yview-180+AnimeY)
 draw_text(view_xview+700,view_yview-200+AnimeY,"Money refill your health bar and#give you ammo for skill")
