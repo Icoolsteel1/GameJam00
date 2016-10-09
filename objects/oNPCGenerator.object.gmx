@@ -283,6 +283,13 @@ if (!playerDead){
         if (alarm[0] == -1) { alarm[0] = (room_speed*2)-lessWait-onLock }
     }
     
+<<<<<<< HEAD
+    if (playerScore &gt; 225) { // Spawn Camion SWAT
+        if (alarm[6] == -1) { alarm[6] = (room_speed*4)-lessWait-onLock }
+    }
+    
+=======
+>>>>>>> b09acea4c22e8d80e374a6c9ff025492b31b3e76
     if (playerScore &gt; 250) { // Spawn Hapache
         if (alarm[1] == -1) { alarm[1] = (room_speed*4)-lessWait-onLock  }
     }

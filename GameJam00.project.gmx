@@ -74,6 +74,19 @@
       <sprite>sprites\sHelico</sprite>
       <sprite>sprites\sSoldat</sprite>
       <sprite>sprites\sSoldatFire</sprite>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <sprite>sprites\sSwatCamion_g</sprite>
+      <sprite>sprites\sSwatCamion_d</sprite>
+      <sprite>sprites\sSwatCamionPorte_g</sprite>
+      <sprite>sprites\sSwatCamionPorte_d</sprite>
+      <sprite>sprites\s_swat_inscription</sprite>
+=======
+      <sprite>sprites\sSwatCamion</sprite>
+      <sprite>sprites\sSwatCamionPorte</sprite>
+>>>>>>> b09acea4c22e8d80e374a6c9ff025492b31b3e76
+>>>>>>> 5872805b0dcf7a3bd2be2cd61553c910ad7abaf8
       <sprite>sprites\sHelicoDetruit</sprite>
       <sprite>sprites\sHelicoMissile</sprite>
       <sprites name="Tank">
@@ -200,13 +213,13 @@
       <object>objects\oEnemySwat</object>
       <object>objects\oEnemyBullet</object>
       <object>objects\oEnemyHapache</object>
-      <object>objects\oEnemyCamionSwat</object>
       <object>objects\oHelicoMissile</object>
       <object>objects\oTank</object>
       <object>objects\oTankCanon</object>
       <object>objects\oAlien</object>
       <object>objects\oAlienBullet</object>
       <object>objects\oAlienExplosion</object>
+      <object>objects\oEnemyCamionSwat</object>
     </objects>
     <objects name="Item">
       <object>objects\oArgentItem</object>
