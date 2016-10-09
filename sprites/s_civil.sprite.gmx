@@ -20,15 +20,15 @@
   <width>6</width>
   <height>30</height>
   <frames>
-    <frame index="0">images\sCivil_0.png</frame>
-    <frame index="1">images\sCivil_1.png</frame>
-    <frame index="2">images\sCivil_2.png</frame>
-    <frame index="3">images\sCivil_3.png</frame>
-    <frame index="4">images\sCivil_4.png</frame>
-    <frame index="5">images\sCivil_5.png</frame>
-    <frame index="6">images\sCivil_6.png</frame>
-    <frame index="7">images\sCivil_7.png</frame>
-    <frame index="8">images\sCivil_8.png</frame>
-    <frame index="9">images\sCivil_9.png</frame>
+    <frame index="0">images\s_civil_0.png</frame>
+    <frame index="1">images\s_civil_1.png</frame>
+    <frame index="2">images\s_civil_2.png</frame>
+    <frame index="3">images\s_civil_3.png</frame>
+    <frame index="4">images\s_civil_4.png</frame>
+    <frame index="5">images\s_civil_5.png</frame>
+    <frame index="6">images\s_civil_6.png</frame>
+    <frame index="7">images\s_civil_7.png</frame>
+    <frame index="8">images\s_civil_8.png</frame>
+    <frame index="9">images\s_civil_9.png</frame>
   </frames>
 </sprite>

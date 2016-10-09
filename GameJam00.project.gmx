@@ -102,7 +102,6 @@
       <sprite>sprites\sBuilding05</sprite>
       <sprite>sprites\sBuilding06</sprite>
       <sprite>sprites\sBuilding07</sprite>
-      <sprite>sprites\sCivil</sprite>
       <sprite>sprites\sVoiture</sprite>
       <sprite>sprites\sBuilding03dmg</sprite>
     </sprites>
@@ -116,7 +115,7 @@
     <sprite>sprites\sSplash</sprite>
     <sprite>sprites\sForest</sprite>
     <sprites name="Civil">
-      <sprite>sprites\sCivil</sprite>
+      <sprite>sprites\s_civil</sprite>
       <sprites name="s_civil_noir">
         <sprite>sprites\s_civil_run_noir</sprite>
         <sprite>sprites\s_civil_peur_noir</sprite>
@@ -132,6 +131,30 @@
       <sprites name="s_civil_rouge">
         <sprite>sprites\s_civil_run_rouge</sprite>
         <sprite>sprites\s_civil_peur_rouge</sprite>
+      </sprites>
+      <sprites name="s_civil_vert">
+        <sprite>sprites\s_civil_run_vert</sprite>
+        <sprite>sprites\s_civil_peur_vert</sprite>
+      </sprites>
+      <sprites name="s_civil2_noir">
+        <sprite>sprites\s_civil2_run_noir</sprite>
+        <sprite>sprites\s_civil2_peur_noir</sprite>
+      </sprites>
+      <sprites name="s_civil2_jaune">
+        <sprite>sprites\s_civil2_run_jaune</sprite>
+        <sprite>sprites\s_civil2_peur_jaune</sprite>
+      </sprites>
+      <sprites name="s_civil2_bleu">
+        <sprite>sprites\s_civil2_run_bleu</sprite>
+        <sprite>sprites\s_civil2_peur_bleu</sprite>
+      </sprites>
+      <sprites name="s_civil2_rouge">
+        <sprite>sprites\s_civil2_run_rouge</sprite>
+        <sprite>sprites\s_civil2_peur_rouge</sprite>
+      </sprites>
+      <sprites name="s_civil2_vert">
+        <sprite>sprites\s_civil2_run_vert</sprite>
+        <sprite>sprites\s_civil2_peur_vert</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -199,7 +222,6 @@
     </objects>
     <objects name="Civil">
       <object>objects\oCivil</object>
-      <object>objects\oCivilTest</object>
     </objects>
   </objects>
   <rooms name="rooms">
