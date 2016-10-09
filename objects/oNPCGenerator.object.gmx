@@ -85,6 +85,14 @@ if (irandom(50) == 50){
           <argument>
             <kind>1</kind>
             <string>/// Spawn Aliens
+
+if (Entity &lt; maxEntity){
+    var getSide = irandom(1)
+    switch(getSide){
+        case 0: i = instance_create(view_xview-12,random_range(60,220),oAlien) i.sideGo = 0 break;
+        case 1: ii = instance_create(view_xview+view_wview+12,random_range(60,220),oAlien) ii.sideGo = 1 break;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -283,8 +291,8 @@ if (!playerDead){
         if (alarm[4] == -1) { alarm[4] = (room_speed*3)-lessWait-onLock  }
     }
     
-    if (playerScore &gt; 800) { // Spawn Tank
-        if (alarm[5] == -1) { alarm[5] = (room_speed*3)-lessWait-onLock  }
+    if (playerScore &gt; 800) { // Spawn Alien
+        if (alarm[5] == -1) { alarm[5] = (room_speed*4)-lessWait-onLock  }
     }
     
     // voiture

@@ -89,6 +89,7 @@
       <sprite>sprites\sSmoke</sprite>
       <sprite>sprites\sBloodSplash</sprite>
       <sprite>sprites\sAlert</sprite>
+      <sprite>sprites\sAlienExplosion</sprite>
     </sprites>
     <sprites name="Building">
       <sprite>sprites\sBuilding01_temp</sprite>
@@ -158,6 +159,7 @@
       <object>objects\oTankCanon</object>
       <object>objects\oAlien</object>
       <object>objects\oAlienBullet</object>
+      <object>objects\oAlienExplosion</object>
     </objects>
     <objects name="Item">
       <object>objects\oArgentItem</object>

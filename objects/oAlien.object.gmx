@@ -88,8 +88,8 @@ if (irandom(5) == 0) {instance_create(x,y-10,oArgentItem)}
 /// Bullets
 if (!detruit)
 {
-    audio_play_sound(snd_fusil,0,0)
-    instance_create(x,y,oAlienBullet)
+    audio_play_sound(snd_Laser,0,0);
+    instance_create(x,y,oAlienBullet);
 }
 </string>
           </argument>
@@ -115,24 +115,23 @@ if (!detruit)
             <kind>1</kind>
             <string>
 if (!detruit){
-    if (place_meeting(x,y,oBullet)){ playerScore += 1 oNPCGenerator.Entity -= 1; detruit = 1; audio_play_sound(snd_miniExplode,0,0) }
-    if (place_meeting(x,y,oLaser)) { playerScore += 1 oNPCGenerator.Entity -= 1; detruit = 1; audio_play_sound(snd_miniExplode,0,0) }
-    if (place_meeting(x,y,oCapillar)){ playerScore += 1 oNPCGenerator.Entity -= 1; detruit = 1; audio_play_sound(snd_miniExplode,0,0) }
+    if (place_meeting(x,y,oBullet)){ playerScore += 2 oNPCGenerator.Entity -= 1; detruit = 1; audio_play_sound(snd_miniExplode,0,0) }
+    if (place_meeting(x,y,oLaser)) { playerScore += 2 oNPCGenerator.Entity -= 1; detruit = 1; audio_play_sound(snd_miniExplode,0,0) }
+    if (place_meeting(x,y,oCapillar)){ playerScore += 2 oNPCGenerator.Entity -= 1; detruit = 1; audio_play_sound(snd_miniExplode,0,0) }
 }
 
 
 if detruit == 1
 {
-    sprite_index = sHelicoDetruit;
+    instance_destroy();
     
     if explosion == 0
     {
-    instance_create(x,y,oExplosionHelico);
+    e = instance_create(x,y,oAlienExplosion);
+    e.image_angle = image_angle;
     explosion = 1;
     }
     
-    if !place_meeting(x,y-60,oRoad) // tombe
-    y += 4;
     
 } else {
     if (sideGo != -1){
