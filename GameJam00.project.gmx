@@ -220,7 +220,6 @@
       <object>objects\oNPCSang</object>
       <object>objects\oExplosionHelico</object>
       <object>objects\oPartSplash</object>
-      <object>objects\oCivil</object>
     </objects>
     <objects name="Civil">
       <object>objects\oCivil</object>
