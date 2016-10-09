@@ -87,6 +87,9 @@ if (attracted) {
     if (place_meeting(x,y,oPlayer)){
         if (oPlayer.hp &lt; oPlayer.maxHp){
             oPlayer.hp += 25
+            if (oPlayer.hp &gt; oPlayer.maxHp){
+                oPlayer.hp = oPlayer.maxHp
+            }
         }
         instance_destroy()
     }
