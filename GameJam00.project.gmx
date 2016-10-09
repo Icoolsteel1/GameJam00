@@ -74,7 +74,6 @@
       <sprite>sprites\sHelico</sprite>
       <sprite>sprites\sSoldat</sprite>
       <sprite>sprites\sSoldatFire</sprite>
-      <sprite>sprites\sSwatCamion</sprite>
       <sprite>sprites\sSwatCamionPorte</sprite>
       <sprite>sprites\sHelicoDetruit</sprite>
       <sprite>sprites\sHelicoMissile</sprite>
@@ -158,6 +157,7 @@
         <sprite>sprites\s_civil2_peur_vert</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\sEnemyAlert</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
