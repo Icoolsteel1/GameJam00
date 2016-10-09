@@ -170,7 +170,6 @@ if detruit == 1
         if (sideGo == 1){
             x -= spd
             image_angle = 15
-            image_xscale = -1
             if (x = view_xview-32) {
                 oNPCGenerator.Entity -= 1
                 instance_destroy()

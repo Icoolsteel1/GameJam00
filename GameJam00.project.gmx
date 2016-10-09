@@ -68,6 +68,7 @@
       <sprite>sprites\sEnemyTerre</sprite>
       <sprite>sprites\sSoldatBullet</sprite>
       <sprite>sprites\sAlien</sprite>
+      <sprite>sprites\sAlienBullet</sprite>
       <sprite>sprites\sHelico</sprite>
       <sprite>sprites\sSoldat</sprite>
       <sprite>sprites\sSoldatFire</sprite>
@@ -153,6 +154,8 @@
       <object>objects\oHelicoMissile</object>
       <object>objects\oTank</object>
       <object>objects\oTankCanon</object>
+      <object>objects\oAlien</object>
+      <object>objects\oAlienBullet</object>
     </objects>
     <objects name="Item">
       <object>objects\oArgentItem</object>
