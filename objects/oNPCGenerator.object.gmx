@@ -151,8 +151,8 @@ if (Entity &lt; maxEntity){
 if (Entity &lt; maxEntity){
     var getSide = irandom(1)
     switch(getSide){
-        case 0: i = instance_create(view_xview-12,652,oVoiture); i.spawn = 1; break;
-        case 1: ii = instance_create(view_xview+view_wview+12,662,oVoiture) ii.spawn = -1 ii.depth=-1; break;
+        case 0: i = instance_create(view_xview-12,646,oVoiture); i.spawn = 1 i.depth=0; break;
+        case 1: ii = instance_create(view_xview+view_wview+12,662,oVoiture) ii.spawn = -1 ii.depth=-2; break;
     }
 }
 </string>
@@ -297,7 +297,7 @@ if (!playerDead){
     
     // voiture
     if alarm[3] == -1
-    alarm[3] = random_range(30, 60)+lessWait+onLock ;
+    alarm[3] = random_range(room_speed*2, room_speed*4)+lessWait+onLock ;
     
     // civils
     if alarm[2] == -1
@@ -306,6 +306,28 @@ if (!playerDead){
     if (alarm[11] == -1) { alarm[11] = room_speed*20}
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
