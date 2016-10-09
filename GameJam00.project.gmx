@@ -136,6 +136,7 @@
       <object>objects\oCivil</object>
       <object>objects\oMenu_Press</object>
       <object>objects\oMouse</object>
+      <object>objects\oINFO</object>
     </objects>
     <objects name="Joueur">
       <object>objects\oPlayer</object>

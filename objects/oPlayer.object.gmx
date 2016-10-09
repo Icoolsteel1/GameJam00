@@ -312,6 +312,7 @@ draw_set_color(c_red)
 draw_line_width(x+lengthdir_x(0,image_angle),y-head_offset-40+lengthdir_y(0,image_angle),mouse_x,mouse_y,random_range(2,4))
 draw_set_color(c_white)
 
+argent -= 1+round(playerScore/100)
 LaserCount--
 if(LaserCount==0){LaserCooldown=240}
 } else {LaserCount=120; LaserActive=0}
