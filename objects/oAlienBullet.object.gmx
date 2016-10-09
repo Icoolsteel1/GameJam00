@@ -63,7 +63,7 @@ if (place_meeting(x,y,oPlayer))
 
 
 // destroy
-if (place_meeting(x,y,oBullet))
+if (place_meeting(x,y,oCapillar))
 {
 instance_destroy();
 }

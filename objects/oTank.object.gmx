@@ -83,7 +83,7 @@ if (irandom(3) == 0) {instance_create(x,y-10,oArgentItem)}
           <argument>
             <kind>1</kind>
             <string>if (!playerDead){
-audio_play_sound(snd_fusil,0,0)
+audio_play_sound(snd_canon,0,0)
 instance_create(canon.x,canon.y,oEnemyBullet)}
 </string>
           </argument>

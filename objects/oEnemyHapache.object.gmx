@@ -139,6 +139,7 @@ if (!detruit){
             <kind>1</kind>
             <string>
 if (!detruit){
+    if (place_meeting(x,y,oPlayer)){ playerScore += 1 oNPCGenerator.Entity -= 1; detruit = 1; audio_play_sound(snd_miniExplode,0,0) }
     if (place_meeting(x,y,oBullet)){ playerScore += 1 oNPCGenerator.Entity -= 1; detruit = 1; audio_play_sound(snd_miniExplode,0,0) }
     if (place_meeting(x,y,oLaser)) { playerScore += 1 oNPCGenerator.Entity -= 1; detruit = 1; audio_play_sound(snd_miniExplode,0,0) }
     if (place_meeting(x,y,oCapillar)){ playerScore += 1 oNPCGenerator.Entity -= 1; detruit = 1; audio_play_sound(snd_miniExplode,0,0) }
