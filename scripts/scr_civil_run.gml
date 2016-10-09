@@ -1,24 +1,24 @@
 
 
-if i == 0
+if habit == 0
 sprite_index = s_civil_run_noir;
-else if i == 1
+else if habit == 1
 sprite_index = s_civil_run_jaune;
-else if i == 2
+else if habit == 2
 sprite_index = s_civil_run_bleu;
-else if i == 3
+else if habit == 3
 sprite_index = s_civil_run_rouge;
-else if i == 4
+else if habit == 4
 sprite_index = s_civil_run_vert;
-else if i == 5
+else if habit == 5
 sprite_index = s_civil2_run_noir;
-else if i == 6
+else if habit == 6
 sprite_index = s_civil2_run_jaune;
-else if i == 7
+else if habit == 7
 sprite_index = s_civil2_run_bleu;
-else if i == 8
+else if habit == 8
 sprite_index = s_civil2_run_rouge;
-else if i == 9
+else if habit == 9
 sprite_index = s_civil2_run_vert;
 
-image_speed = 0.06;
+
