@@ -314,7 +314,7 @@ if (!playerDead){
         if (alarm[0] == -1) { alarm[0] = (room_speed*2)-lessWait-onLock }
     }
     
-    if (playerScore &gt; 1) { // Spawn Camion SWAT // 200
+    if (playerScore &gt; 225) { // Spawn Camion SWAT
         if (alarm[6] == -1) { alarm[6] = (room_speed*4)-lessWait-onLock }
     }
     
