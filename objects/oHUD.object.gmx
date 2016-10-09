@@ -8,6 +8,65 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>alertAlpha = 0
+toDo = 0.1
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (roomLock){
+    if (toDo == 0.1){
+        alertAlpha += toDo
+        if (alertAlpha == 1){
+            toDo = -0.1
+        }
+    } else {
+        alertAlpha += toDo
+        if (alertAlpha == 0){
+            toDo = 0.1
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -53,7 +112,7 @@ if (!playerDead){
     draw_sprite(sCapillarUp,0,view_xview+50,view_yview+300)
     draw_sprite_ext(sLaserDo,0,view_xview+50,view_yview+300,1,oPlayer.CapillarCooldown/oPlayer.CapillarCooldownMax,0,c_white,1)
     
-    draw_sprite(sDollarUp,0,view_xview+30,view_yview+350)
+    draw_sprite(sDollarUp,0,view_xview+50,view_yview+350)
     draw_sprite_ext(sLaserDo,0,view_xview+50,view_yview+386,1,oPlayer.FlameCooldown/oPlayer.FlameCooldownMax,0,c_white,1)
     
     draw_set_halign(fa_right)
@@ -61,6 +120,15 @@ if (!playerDead){
     draw_text(view_xview+view_wview-30,view_yview+50,"'F1' For INFO")
     draw_set_halign(fa_left)
 
+    if (roomLock){
+        draw_set_color(c_red)
+        draw_set_halign(fa_center)
+        draw_set_alpha(alertAlpha)
+        draw_sprite_ext(sAlert,0,view_xview+view_wview/2,view_yview+126,2,2,0,c_white,alertAlpha)
+        draw_set_alpha(1)
+        draw_set_color(c_black)
+    }
+    
 } else {
     draw_set_font(fnt_arial)
     draw_set_halign(fa_center)

@@ -86,6 +86,7 @@
       <sprite>sprites\sExplosionHelico</sprite>
       <sprite>sprites\sSmoke</sprite>
       <sprite>sprites\sBloodSplash</sprite>
+      <sprite>sprites\sAlert</sprite>
     </sprites>
     <sprites name="Building">
       <sprite>sprites\sBuilding01_temp</sprite>
