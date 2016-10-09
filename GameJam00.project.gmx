@@ -116,7 +116,6 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
-    <background>background\background2</background>
     <background>background\Background3</background>
   </backgrounds>
   <paths name="paths"/>

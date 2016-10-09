@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>getForest = irandom(2)
+            <string>
+getForest = irandom(2);
+
 </string>
           </argument>
         </arguments>
@@ -48,13 +50,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (x&lt;view_xview+view_wview/2){
+            <string>
+if (x&lt;view_xview+view_wview)
+
+{
     if (!place_meeting(x+sprite_get_width(sprite_index),y,oBackgroundRock)){
         instance_create(x+sprite_get_width(sprite_index),y,oBackgroundRock)
     }
 }
 
-if (x+sprite_get_width(sprite_index) &lt;= view_xview-32) { instance_destroy() }
+if (x+sprite_get_width(sprite_index) &lt;= view_xview-32)
+{ instance_destroy() }
 </string>
           </argument>
         </arguments>
@@ -78,8 +84,10 @@ if (x+sprite_get_width(sprite_index) &lt;= view_xview-32) { instance_destroy() }
           <argument>
             <kind>1</kind>
             <string>
+draw_self();
+
 if (getForest == 1) { draw_sprite(sForest,0,x,512-sprite_get_height(sForest))}
-draw_self()
+
 if (getForest == 2) { draw_sprite(sForest,0,x+120,512-sprite_get_height(sForest))}
 </string>
           </argument>
