@@ -282,6 +282,10 @@ if (!playerDead){
             vspd += 1
         }
     }
+    
+    if (LaserActive == 1){
+        instance_deactivate_object(oLaser)
+    }
 }
 </string>
           </argument>
