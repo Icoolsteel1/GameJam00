@@ -57,6 +57,7 @@ sound[1] = snd_building_down_02
           <argument>
             <kind>1</kind>
             <string>/// Creation de l'immeuble
+dmg_anim=0
 
 getType = irandom(1)
 buildingType = noone
@@ -103,18 +104,21 @@ maxCashSpawn = 25
             <kind>1</kind>
             <string>/// Interaction avec les projectils
 
+dmg_anim--
+
 /* Collision Bullet */
 proj = instance_place(x,y,oBullet)
 if (proj != noone){
     vie -= 2
     with(proj) { instance_destroy() }
+    dmg_anim=5
 }
 
 /* Collision Laser */
-if (instance_place(x,y,oLaser)){vie -=1}
+if (instance_place(x,y,oLaser)){vie -=1 dmg_anim=5}
 
 /* Collision Capillar*/
-if (instance_place(x,y,oCapillar)){vie -=1}
+if (instance_place(x,y,oCapillar)){vie -=1 dmg_anim=5}
 
 if (vie &lt; 0) {
     if (buildingType == 1){
@@ -138,6 +142,20 @@ if (vie &lt; 0) {
     playerScore += 10
     audio_play_sound(sound[irandom(1)],0,0)
     instance_destroy()
+}
+
+if(dmg_anim&gt;0)
+{
+
+if(buildingType == 0){sprite_index=sBuilding01dmg}
+if(buildingType == 1){sprite_index=sBuilding03dmg}
+
+}
+else{
+
+if(buildingType == 0){sprite_index=sBuilding01}
+if(buildingType == 1){sprite_index=sBuilding03}
+
 }
 
 if (place_meeting(x,y,oSecurity)){instance_destroy()}
