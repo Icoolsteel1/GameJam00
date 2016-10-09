@@ -74,8 +74,6 @@
       <sprite>sprites\sHelico</sprite>
       <sprite>sprites\sSoldat</sprite>
       <sprite>sprites\sSoldatFire</sprite>
-      <sprite>sprites\sSwatCamion</sprite>
-      <sprite>sprites\sSwatCamionPorte</sprite>
       <sprite>sprites\sHelicoDetruit</sprite>
       <sprite>sprites\sHelicoMissile</sprite>
       <sprites name="Tank">
