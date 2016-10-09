@@ -3,11 +3,11 @@
   <type>0</type>
   <xorig>18</xorig>
   <yorigin>8</yorigin>
-  <colkind>0</colkind>
+  <colkind>1</colkind>
   <coltolerance>0</coltolerance>
-  <sepmasks>-1</sepmasks>
+  <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>5</bbox_left>
+  <bbox_left>0</bbox_left>
   <bbox_right>36</bbox_right>
   <bbox_top>0</bbox_top>
   <bbox_bottom>15</bbox_bottom>
@@ -20,8 +20,8 @@
   <width>37</width>
   <height>16</height>
   <frames>
-    <frame index="0">images\sSwatCamion_0.png</frame>
-    <frame index="1">images\sSwatCamion_1.png</frame>
-    <frame index="2">images\sSwatCamion_2.png</frame>
+    <frame index="0">images\sSwatCamionPorte_g_0.png</frame>
+    <frame index="1">images\sSwatCamionPorte_g_1.png</frame>
+    <frame index="2">images\sSwatCamionPorte_g_2.png</frame>
   </frames>
 </sprite>

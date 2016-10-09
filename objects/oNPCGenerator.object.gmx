@@ -67,6 +67,37 @@ if (irandom(50) == 50){
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Create unity CAMION SWAT
+
+if (Entity &lt; maxEntity){
+    var getSide = irandom(1)
+    switch(getSide){
+        case 0: i = instance_create(view_xview-12,640,oEnemyCamionSwat) i.spawn = 0; break;
+        case 1: ii = instance_create(view_xview+view_wview+12,640,oEnemyCamionSwat) ii.spawn = 1;break;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="5">
       <action>
         <libid>1</libid>
@@ -283,6 +314,10 @@ if (!playerDead){
         if (alarm[0] == -1) { alarm[0] = (room_speed*2)-lessWait-onLock }
     }
     
+    if (playerScore &gt; 1) { // Spawn Camion SWAT // 200
+        if (alarm[6] == -1) { alarm[6] = (room_speed*4)-lessWait-onLock }
+    }
+    
     if (playerScore &gt; 250) { // Spawn Hapache
         if (alarm[1] == -1) { alarm[1] = (room_speed*4)-lessWait-onLock  }
     }
@@ -294,6 +329,8 @@ if (!playerDead){
     if (playerScore &gt; 800) { // Spawn Alien
         if (alarm[5] == -1) { alarm[5] = (room_speed*8)-lessWait-onLock  }
     }
+    
+    
     
     // voiture
     if alarm[3] == -1
