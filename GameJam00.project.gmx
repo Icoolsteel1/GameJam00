@@ -95,13 +95,16 @@
     <sprites name="Building">
       <sprite>sprites\sBuilding01_temp</sprite>
       <sprite>sprites\sBuilding01</sprite>
+      <sprite>sprites\sBuilding01dmg</sprite>
       <sprite>sprites\sbuilding02</sprite>
       <sprite>sprites\sBuilding03</sprite>
       <sprite>sprites\sBuilding04</sprite>
       <sprite>sprites\sBuilding05</sprite>
       <sprite>sprites\sBuilding06</sprite>
       <sprite>sprites\sBuilding07</sprite>
+      <sprite>sprites\sCivil</sprite>
       <sprite>sprites\sVoiture</sprite>
+      <sprite>sprites\sBuilding03dmg</sprite>
     </sprites>
     <sprite>sprites\sFloor</sprite>
     <sprite>sprites\sSky</sprite>
