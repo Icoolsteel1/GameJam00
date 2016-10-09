@@ -35,7 +35,7 @@ vspd = 0
 jspd = 16
 hp = 250 // vie 
 maxHp = 250 // vie maximal
-argent = 1200
+argent = 1500
 maxArgent = 75000
 
 jumped = false; // Quand l'ont fait un saut

@@ -87,10 +87,10 @@ game_end();
 draw_self()
 draw_set_halign(fa_right)
 draw_set_valign(fa_bottom)
-draw_set_font(fnt_arial)
-draw_text_transformed(room_width,room_height,"Create By Team NoBrain_NoGame",0.8,0.8,0)
+draw_set_font(fnt_wolf)
+draw_text_transformed(room_width,room_height,"Create By Team NoBrain_NoGame",0.9,0.9,0)
 draw_set_halign(fa_left)
-draw_text_transformed(0,room_height,"#GameJam00 #GMFrance.net",0.8,0.8,0)
+draw_text_transformed(0,room_height,"#GameJam00 #GMFrance.net",0.9,0.9,0)
 draw_set_valign(fa_top)
 </string>
           </argument>

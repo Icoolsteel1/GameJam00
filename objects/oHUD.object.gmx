@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-100</depth>
+  <depth>-99</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -117,7 +117,7 @@ if (!playerDead){
     
     draw_set_halign(fa_right)
     draw_set_color(c_white)
-    draw_text(view_xview+view_wview-30,view_yview+50,"'F1' For INFO")
+    draw_text(view_xview+view_wview-30,view_yview+30,"'F1' For INFO")
     draw_set_halign(fa_left)
 
     if (roomLock){
