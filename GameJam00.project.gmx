@@ -104,6 +104,7 @@
       <sprite>sprites\sBuilding07</sprite>
       <sprite>sprites\sVoiture</sprite>
       <sprite>sprites\sBuilding03dmg</sprite>
+      <sprite>sprites\sBuilding07dmg</sprite>
     </sprites>
     <sprite>sprites\sFloor</sprite>
     <sprite>sprites\sSky</sprite>
