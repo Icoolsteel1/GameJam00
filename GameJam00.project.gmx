@@ -220,10 +220,7 @@
       <object>objects\oNPCSang</object>
       <object>objects\oExplosionHelico</object>
       <object>objects\oPartSplash</object>
-<<<<<<< HEAD
-=======
       <object>objects\oPartSmoke</object>
->>>>>>> 7af9619f10f7d0a2b451976e88bdcceb007fda98
     </objects>
     <objects name="Civil">
       <object>objects\oCivil</object>
