@@ -29,6 +29,39 @@
 
 Entity = 0
 maxEntity = 1200
+onLock = 0
+
+alarm[11] = room_speed*20
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Lock room 
+
+if (irandom(50) == 50){
+    roomLock = true
+    oInit.alarm[11] = room_speed*10
+} else {
+    alarm[11] = room_speed
+}
 </string>
           </argument>
         </arguments>
@@ -208,26 +241,34 @@ if (Entity &lt; maxEntity){
             <kind>1</kind>
             <string>var lessWait = playerScore/125
 
+if (roomLock){
+    onLock = 45
+} else {
+    onLock = 0
+}
+
 if (!playerDead){
     if (playerScore &gt; 25) { // Spawn SWAT
-        if (alarm[0] == -1) { alarm[0] = room_speed*2-lessWait }
+        if (alarm[0] == -1) { alarm[0] = (room_speed*2)-lessWait-onLock }
     }
     
     if (playerScore &gt; 250) { // Spawn Hapache
-        if (alarm[1] == -1) { alarm[1] = room_speed*4-lessWait }
+        if (alarm[1] == -1) { alarm[1] = (room_speed*4)-lessWait-onLock  }
     }
     
     if (playerScore &gt; 425) { // Spawn Tank
-        if (alarm[4] == -1) { alarm[4] = room_speed*3-lessWait }
+        if (alarm[4] == -1) { alarm[4] = (room_speed*3)-lessWait-onLock  }
     }
     
     // voiture
     if alarm[3] == -1
-    alarm[3] = random_range(30, 60)+lessWait;
+    alarm[3] = random_range(30, 60)+lessWait+onLock ;
     
     // civils
     if alarm[2] == -1
-    alarm[2] = random_range(20,50)+lessWait;
+    alarm[2] = random_range(20,50)+lessWait+onLock ;
+    
+    if (alarm[11] == -1) { alarm[11] = room_speed*20}
 }
 </string>
           </argument>
