@@ -112,6 +112,7 @@ if (place_meeting(x,y,oPlayer)){ playerScore += 1 oNPCGenerator.Entity -= 1 inst
 if (place_meeting(x,y,oBullet)){ playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy() }
 if (place_meeting(x,y,oLaser)) { playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy() }
 if (place_meeting(x,y,oCapillar)) { playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy() }
+if (place_meeting(x,y,oDropArea)) { playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy() }
 </string>
           </argument>
         </arguments>

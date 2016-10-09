@@ -116,6 +116,9 @@ if (instance_place(x,y,oLaser)){vie -=1}
 /* Collision Capillar*/
 if (instance_place(x,y,oCapillar)){vie -=1}
 
+/* Collision Saut */
+if (instance_place(x,y,oDropArea)){vie -=1}
+
 if (vie &lt; 0) {
     if (buildingType == 1){
         if (playerScore/10 &gt;= maxCashSpawn){
