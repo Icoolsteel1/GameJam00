@@ -74,11 +74,16 @@
       <sprite>sprites\sHelico</sprite>
       <sprite>sprites\sSoldat</sprite>
       <sprite>sprites\sSoldatFire</sprite>
+<<<<<<< HEAD
       <sprite>sprites\sSwatCamion_g</sprite>
       <sprite>sprites\sSwatCamion_d</sprite>
       <sprite>sprites\sSwatCamionPorte_g</sprite>
       <sprite>sprites\sSwatCamionPorte_d</sprite>
       <sprite>sprites\s_swat_inscription</sprite>
+=======
+      <sprite>sprites\sSwatCamion</sprite>
+      <sprite>sprites\sSwatCamionPorte</sprite>
+>>>>>>> b09acea4c22e8d80e374a6c9ff025492b31b3e76
       <sprite>sprites\sHelicoDetruit</sprite>
       <sprite>sprites\sHelicoMissile</sprite>
       <sprites name="Tank">
@@ -161,7 +166,6 @@
         <sprite>sprites\s_civil2_peur_vert</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\sEnemyAlert</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>

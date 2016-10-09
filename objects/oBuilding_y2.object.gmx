@@ -60,12 +60,12 @@ sprite_index = build[index]
 
 oSwat = instance_place(x,y,oEnemySwat)
 if (oSwat != noone){
-    draw_sprite_ext(sEnemyAlert,0,oSwat.x,oSwat.y,2,2,0,c_white,1)
+    draw_circle_colour(oSwat.x,oSwat.y,4,c_red,c_red,false)
 }
 
 obTank = instance_place(x,y,oTank)
 if (obTank != noone){
-    draw_sprite_ext(sEnemyAlert,0,oSwat.x,oSwat.y,2,2,0,c_white,1)
+    draw_circle_colour(obTank.x,obTank.y,4,c_red,c_red,false)
 }
 
 
