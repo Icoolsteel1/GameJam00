@@ -9,8 +9,8 @@
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
   <bbox_right>1279</bbox_right>
-  <bbox_top>333</bbox_top>
-  <bbox_bottom>719</bbox_bottom>
+  <bbox_top>301</bbox_top>
+  <bbox_bottom>623</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -18,7 +18,7 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>1280</width>
-  <height>720</height>
+  <height>624</height>
   <frames>
     <frame index="0">images\sSky3_0.png</frame>
   </frames>
