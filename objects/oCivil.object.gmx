@@ -28,14 +28,21 @@
             <string>
 spawn = 0;
 
-image_index = irandom(100);
-image_speed = 0;
+image_index = irandom(3);;
+//image_index = irandom(100); // jaune
+i = image_index;
+
+scr_civil_run();
+//s = sprite_index; //
+
 
 
 stopDistance = irandom_range(60,120)
 spd = 1.2
 vie=1
 peur=0;
+
+
 
 </string>
           </argument>
@@ -97,8 +104,13 @@ if (distance_to_object(oPlayer) &lt;= stopDistance){ // dans rayon player
     peur = 1
 }
 
-if peur == 1{
-    spd = 2;
+// peur
+if peur == 1
+{
+    scr_civil_peur();
+    image_speed = 0.1;
+    
+    spd = 3;
     
     if spawn == 1 // spawn gauche
     {
@@ -112,12 +124,13 @@ if peur == 1{
     image_xscale = 1;
     
     }
+// run
 } else {
     if (spawn == -1) {
-        spd = -1.5
+        spd = -1 // 1.5
         image_xscale = -1;
     } else {
-        spd = 1.5
+        spd = 1
         image_xscale = 1;
     }
     

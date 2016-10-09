@@ -61,6 +61,7 @@
     <instance objName="oMouse" x="32" y="128" name="inst_6FE03569" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oINFO" x="0" y="147" name="inst_FF6C0FBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBackgroundRock" x="0" y="688" name="inst_86F593F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oCivilTest" x="160" y="597" name="inst_40919753" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

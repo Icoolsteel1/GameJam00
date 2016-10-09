@@ -97,7 +97,6 @@
       <sprite>sprites\sBuilding01</sprite>
       <sprite>sprites\sbuilding02</sprite>
       <sprite>sprites\sBuilding03</sprite>
-      <sprite>sprites\sCivil</sprite>
       <sprite>sprites\sBuilding04</sprite>
       <sprite>sprites\sBuilding05</sprite>
       <sprite>sprites\sBuilding06</sprite>
@@ -113,12 +112,35 @@
     <sprite>sprites\sRoad2</sprite>
     <sprite>sprites\sSplash</sprite>
     <sprite>sprites\sForest</sprite>
+    <sprites name="Civil">
+      <sprite>sprites\sCivil</sprite>
+      <sprites name="s_civil_noir">
+        <sprite>sprites\s_civil_run_noir</sprite>
+        <sprite>sprites\s_civil_peur_noir</sprite>
+      </sprites>
+      <sprites name="s_civil_jaune">
+        <sprite>sprites\s_civil_run_jaune</sprite>
+        <sprite>sprites\s_civil_peur_jaune</sprite>
+      </sprites>
+      <sprites name="s_civil_bleu">
+        <sprite>sprites\s_civil_run_bleu</sprite>
+        <sprite>sprites\s_civil_peur_bleu</sprite>
+      </sprites>
+      <sprites name="s_civil_rouge">
+        <sprite>sprites\s_civil_run_rouge</sprite>
+        <sprite>sprites\s_civil_peur_rouge</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
     <background>background\Background3</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_civil_run.gml</script>
+    <script>scripts\scr_civil_peur.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_wolf</font>
     <font>fonts\fnt_arial</font>
@@ -138,7 +160,6 @@
       <object>objects\oBuilding_y2</object>
       <object>objects\oBuilding_Destroy</object>
       <object>objects\oVoiture</object>
-      <object>objects\oCivil</object>
       <object>objects\oMenu_Press</object>
       <object>objects\oMouse</object>
       <object>objects\oINFO</object>
@@ -172,6 +193,10 @@
       <object>objects\oExplosionHelico</object>
       <object>objects\oPartSplash</object>
       <object>objects\oPartSmoke</object>
+    </objects>
+    <objects name="Civil">
+      <object>objects\oCivil</object>
+      <object>objects\oCivilTest</object>
     </objects>
   </objects>
   <rooms name="rooms">

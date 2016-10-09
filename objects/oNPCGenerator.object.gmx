@@ -151,7 +151,7 @@ if (Entity &lt; maxEntity){
 if (Entity &lt; maxEntity){
     var getSide = irandom(1)
     switch(getSide){
-        case 0: i = instance_create(view_xview-12,650,oVoiture); i.spawn = 1; break;
+        case 0: i = instance_create(view_xview-12,652,oVoiture); i.spawn = 1; break;
         case 1: ii = instance_create(view_xview+view_wview+12,662,oVoiture) ii.spawn = -1 ii.depth=-1; break;
     }
 }
