@@ -3,7 +3,7 @@
   <spriteName>s_civil</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-11</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,17 +28,16 @@
             <string>
 spawn = 0;
 
-image_index = irandom(3);;
-//image_index = irandom(100); // jaune
-i = image_index;
+image_speed = 0;
 
-scr_civil_run();
-//s = sprite_index; //
+habit = irandom(9);
+
+
 
 
 
 stopDistance = irandom_range(60,120)
-spd = 1.2
+spd = 0.7 // 1.2
 vie=1
 peur=0;
 
@@ -101,17 +100,20 @@ if (place_meeting(x,y,oLaser)) { playerScore += 1 oNPCGenerator.Entity -= 1 inst
 if (place_meeting(x,y,oDropArea)) { playerScore += 1 oNPCGenerator.Entity -= 1 instance_destroy()}
 
 
-if (distance_to_object(oPlayer) &lt;= stopDistance){ // dans rayon player
+if (distance_to_object(oPlayer) &lt;= stopDistance) // dans rayon player
+{ 
     peur = 1
 }
+
+
 
 // peur
 if peur == 1
 {
-    scr_civil_peur();
+    scr_civil_peur();    
     image_speed = 0.1;
     
-    spd = 3;
+    spd = 1.5;
     
     if spawn == 1 // spawn gauche
     {
@@ -125,10 +127,15 @@ if peur == 1
     image_xscale = 1;
     
     }
-// run
-} else {
+
+}
+else // run
+{
+    scr_civil_run();
+    image_speed = 0.06;
+    
     if (spawn == -1) {
-        spd = -1 // 1.5
+        spd = -1
         image_xscale = -1;
     } else {
         spd = 1
