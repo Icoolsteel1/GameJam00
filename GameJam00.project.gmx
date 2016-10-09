@@ -50,6 +50,7 @@
       <sprite>sprites\sSolid</sprite>
       <sprite>sprites\sTempBullet</sprite>
       <sprite>sprites\sMenu_Press</sprite>
+      <sprite>sprites\sMedpack</sprite>
     </sprites>
     <sprites name="Joueur">
       <sprite>sprites\sCapillarDo</sprite>
@@ -187,6 +188,7 @@
     </objects>
     <objects name="Item">
       <object>objects\oArgentItem</object>
+      <object>objects\oMedpack</object>
     </objects>
     <objects name="Particule">
       <object>objects\oPartBlood</object>

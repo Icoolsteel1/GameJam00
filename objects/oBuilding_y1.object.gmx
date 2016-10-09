@@ -59,12 +59,13 @@ sound[1] = snd_building_down_02
             <string>/// Creation de l'immeuble
 dmg_anim=0
 
-getType = irandom(1)
+getType = irandom(2)
 buildingType = noone
 
 switch(getType){
     case 0: buildingType = 0 break;
     case 1: buildingType = 1 break;
+    case 2: buildingType = 2 break;
 }
 
 
@@ -75,7 +76,11 @@ if (buildingType == 0){
 
 if (buildingType == 1){
     sprite_index = sBuilding03
-} 
+}
+
+if (buildingType == 2){
+    sprite_index = sBuilding07
+}
 
 vie = choose(3,5,7)
 
@@ -135,10 +140,12 @@ if (vie &lt; 0) {
             }
         }
         
-    } else {
+    } else if (buildingType == 0){
         for (i=0;i&lt;irandom(10);i++){
             instance_create(x+irandom_range(0,sprite_get_width(sprite_index)), y+irandom_range(0,sprite_get_height(sprite_index)-120), oArgentItem)
         }
+    } else if (buildingType == 2){
+        instance_create(x+irandom_range(0,sprite_get_width(sprite_index)), y+irandom_range(0,sprite_get_height(sprite_index)-120), oMedpack)
     }
     inst = instance_create(x,y,oBuilding_Destroy)
     inst.sprite_index = sprite_index
